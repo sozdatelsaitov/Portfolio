@@ -154,6 +154,7 @@ h1{
 .work {
   height: 888px;
   position: relative;
+  background-color: #ECECEC;
 }
 .work:hover{
   opacity: 1;
@@ -169,6 +170,7 @@ h1{
   height: 100%;
   object-fit: cover;
   object-position: center;
+  border-radius: 10px;
 }
 
 .work__name {
@@ -206,16 +208,138 @@ h1{
 
 .visual__wrapper {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 24px;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-auto-rows: 200px;
+  gap: 15px;
+  background: radial-gradient(circle, #202020, #323232);
+  border-radius: 10px;
+  padding: 15px;
 }
 
-.visual__img {
-  height: 400px;
+.visual__img,
+.visual__placeholder {
   width: 100%;
+  height: 100%;
   object-fit: cover;
   object-position: center;
+  display: block;
+  border-radius: 10px;
 }
+
+/* Текстовые блоки */
+
+.visual__text-block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ff6f61;
+  color: #DEDEDE;
+  font-size: 22px;
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+
+
+@media (max-width: 1120px){
+.visual__text-block--large {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.visual__text-block--medium {
+  grid-column: span 2;
+}
+
+.visual__text-block--tall {
+  grid-row: span 2;
+}
+}
+
+@media (max-width: 905px){
+  .visual__text-block--large {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+  
+  .visual__text-block--medium {
+    grid-column: span 1;
+  }
+  
+  .visual__text-block--tall {
+    grid-row: span 2;
+  }
+  }
+
+  @media (max-width: 690px){
+    .visual__text-block--large {
+      grid-column: span 2;
+      grid-row: span 2;
+    }
+    
+    .visual__text-block--medium {
+      grid-column: span 2;
+    }
+    
+    .visual__text-block--tall {
+      grid-row: span 2;
+    }
+    }
+
+
+
+/* Пример различных размеров изображений */
+.visual__img--large {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.visual__img--medium {
+  grid-column: span 2;
+}
+
+.visual__img--tall {
+  grid-row: span 2;
+}
+
+
+
+/* Медиа-запрос для маленьких экранов */
+/* Медиа-запрос для экранов шириной до 480px */
+@media (max-width: 480px) {
+  .visual__wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+    justify-items: center;
+  }
+
+  .visual__img,
+  .visual__placeholder,
+  .visual__text-block {
+    width: 100%;
+    max-width: none;
+    height: auto;
+  }
+
+  .visual__img--large,
+  .visual__img--medium,
+  .visual__img--tall,
+  .visual__text-block--large,
+  .visual__text-block--medium,
+  .visual__text-block--tall {
+    grid-column: unset;
+    grid-row: unset;
+  }
+  /* .visual__text-block{
+    display: none;
+  } */
+
+}
+
+
+
 
 /* Проекты */
 .project__h2{
@@ -230,7 +354,7 @@ h1{
   color: #DEDEDE;
 }
 
-/* Видео скрол  .........................................................................................*/
+/* Видео скрол*/
 
 .video-wrapper {
   position: relative;
@@ -251,16 +375,23 @@ h1{
 .video-container::-webkit-scrollbar {
   display: none; /* скрыть ползунок на Chrome, Safari и Opera */
 }
-
+/* .................................................................................................................. */
 .video-item {
   flex: 0 0 auto;
   margin: 20px;
+  background: linear-gradient(100deg, #202020, #323232);
+  border-radius: 20px;
+  color: #DEDEDE;;
 }
 
 .vid{
   border-radius: 20px;
   height: 570px;
   width: 320px;
+}
+
+h4{
+  text-align: center;
 }
 
 .scroll-button {
@@ -376,6 +507,11 @@ span{
     justify-self: center; /* Центрируем внутри */
     max-width: 560px; /* Чтобы не был слишком широким */
   }
+
+  .work__name {
+    display: none;
+  }
+
 }
 
 @media (max-width: 950px){
@@ -441,10 +577,6 @@ span{
     margin-top: 35px;
   }
 
-  .visual__img {
-    height: 300px;
-  }
-
   .visual__h2{
     margin-top: 116px;
   }
@@ -471,9 +603,9 @@ span{
 
 @media (max-width: 750px){
 
-  .visual__wrapper {
+  /* .visual__wrapper {
     grid-template-columns: 1fr 1fr;
-  }
+  } */
 
   .welcome__img {
     width: 340px;
@@ -592,13 +724,13 @@ span{
     width: auto;
   }
 
-  .visual__wrapper {
+  /* .visual__wrapper {
     grid-template-columns: 1fr;
-  }
+  } */
 
   .vid{
     height: auto;
-    /* width: 320px; */
+    width: 350px;
   }
 }
 
@@ -612,4 +744,91 @@ span{
     width: auto;
     padding: 0 auto;
   }
+}
+
+/* Вторая страница ----------------------------------------------------------------------------------- */
+/* Вторая страница ----------------------------------------------------------------------------------- */
+/* Вторая страница ----------------------------------------------------------------------------------- */
+/* Вторая страница ----------------------------------------------------------------------------------- */
+
+/* Основные стили */
+/* Основные стили */
+body {
+  font-family: 'Manrope', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Стили для заголовка */
+/* .header {
+  background: linear-gradient(to bottom, #9d9d9d, #ffffff);
+  padding: 20px 0;
+  text-align: center;
+} */
+
+.header__title {
+  margin: 0;
+  color: #DEDEDE;
+  font-size: 36px;
+}
+
+.header__nav a {
+  margin: 0 10px;
+  color: #DEDEDE;
+  text-decoration: none;
+}
+
+/* Стили для деталей проекта */
+.project-details {
+  padding: 50px 0;
+}
+
+.project-details__title {
+  font-size: 28px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.project-details__gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 24px;
+  margin-bottom: 20px;
+}
+
+.project-details__img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.project-details__description {
+  max-width: 800px;
+  margin: 20px auto;
+  text-align: justify;
+}
+
+.project-details__video {
+  max-width: 800px;
+  margin: 20px auto;
+  text-align: center;
+}
+
+.project-details__video h3 {
+  margin-bottom: 10px;
+  font-size: 24px;
+}
+
+/* Стили для футера */
+/* .footer {
+  background: linear-gradient(to bottom, #9d9d9d, #ffffff);
+  text-align: center;
+  padding: 20px 0;
+} */
+
+.footer p {
+  margin: 0;
+  color: #DEDEDE;
 }
