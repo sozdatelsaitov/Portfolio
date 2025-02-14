@@ -260,6 +260,7 @@ h1{
 .vid{
   border-radius: 20px;
   height: 570px;
+  width: 320px;
 }
 
 .scroll-button {
@@ -596,7 +597,8 @@ span{
   }
 
   .vid{
-    height: 400px;
+    height: auto;
+    /* width: 320px; */
   }
 }
 
