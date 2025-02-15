@@ -520,6 +520,7 @@ h1{
 }
 .iphone{
   position: absolute;
+  pointer-events: none;
   height: 630px;
   width: 590px;
   top: -10px;
