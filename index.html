@@ -13,9 +13,10 @@
   <div class="container">
     <a href="#" class="logo"><img src="images/logo.svg" alt="logo">Logo Here</a>
       <nav class="header__nav">
-        <a href="index.html" class="header__link">Home</a>
-        <a href="#WORK" class="header__link">Work</a>
-        <a href="#CONTACT" class="header__link">Contact</a>
+        <a href="index.html" class="header__link">Головна</a>
+        <a href="#WORK" class="header__link">Кейси</a>
+        <a href="#PRISE" class="header__link">Прайс</a>
+        <a href="#CONTACT" class="header__link">Контакти</a>
       </nav>
 
       <button class="burger-menu" type="button">
@@ -34,7 +35,7 @@
         <p class="welcome__text">I help businesses and companies reach 
           their goals by designing user-centric digital 
           products & interactive experiences.</p>
-          <a class="btn walcome__btn" href="mailto:hi@yourname.com">hi@yourname.com</a>
+          <a class="btn walcome__btn" href="https://www.instagram.com/yesolda_?igsh=MTk1dXV2dTNkMDhmMw==" target="_blank">Instagram <strong class="strong-inst">yesolda_</strong></a>
       </div>
         <img src="images/me.jpg" alt="Me" class="welcome__img">
     </div>
@@ -42,24 +43,47 @@
 
   <section class="works" id="WORK">
     <div class="container">
-      <button class="works__btn">Мої кейси</button>
-
+        <button class="works__btn" id="worksBtn">Про мене:</button>
+        
+          <div class="works__content" id="worksContent">
+            <p>Привіт! Мене звати [Ваше Ім'я], і я спеціаліст з SMM (соціального медіа маркетингу) з [кількість] років досвіду. Протягом своєї кар'єри я допомагав бізнесам різних галузей зростати і досягати своїх цілей через ефективну роботу з соціальними мережами.</p>
+            <h3>Мої навички та досвід:</h3>
+            <ul>
+                <li><strong>Стратегія соціальних медіа: </strong> Розробка індивідуальних стратегій для кожної платформи з урахуванням цільової аудиторії та бізнес-цілей.</li>
+                <li><strong>Контент-маркетинг:</strong> Створення якісного та захоплюючого контенту, який привертає увагу та підтримує взаємодію з аудиторією.</li>
+                <li><strong>Аналіз та звітність:</strong> Використання аналітичних інструментів для моніторингу ефективності кампаній і оптимізації контенту.</li>
+                <li><strong>Реклама в соціальних мережах:</strong> Запуск таргетованих рекламних кампаній для досягнення максимальних результатів.</li>
+                <li><strong>Взаємодія з аудиторією:</strong> Управління спільнотами, модерація коментарів та побудова довірливих відносин з клієнтами.</li>
+            </ul>
+            <h3>Чому обирають мене:</h3>
+            <ul>
+                <li><strong>Креативність:</strong> Я завжди намагаюся знайти нові та інноваційні підходи до вирішення маркетингових завдань.</li>
+                <li><strong>Комунікація:</strong> Відкритий до спілкування та співпраці, я завжди на зв'язку, щоб відповідати на питання та надавати підтримку.</li>
+                <li><strong>Результати:</strong> Мій досвід і знання допомогли багатьом компаніям збільшити свою присутність у соціальних мережах і підвищити залученість аудиторії.</li>
+            </ul>
+            <p>Якщо вам потрібен надійний і професійний спеціаліст з SMM, я готовий допомогти вашому бізнесу досягти нових висот! Давайте обговоримо ваші цілі та як ми можемо разом їх реалізувати.</p>
+        </div>
+    
       <div class="works__wrapper">
         <a class="work" href="paga2.html">
-          <img class="work__img" src="images/work1.jpg">
-          <span class="work__name">InVersion</span>
+          <img class="work__img" src="images/case1.jpg">
+          <span class="work__name">Докладніше...</span>
+          <p class="work__about">Докладніше...</p>
         </a>
         <a class="work" href="">
-          <img class="work__img" src="images/work2.jpg">
-          <span class="work__name">InVersion</span>
+          <img class="work__img" src="images/case1.jpg">
+          <span class="work__name">Докладніше...</span>
+          <p class="work__about">Докладніше...</p>
         </a>
         <a class="work" href="">
-          <img class="work__img" src="images/work3.jpg">
-          <span class="work__name">InVersion</span>
+          <img class="work__img" src="images/case1.jpg">
+          <span class="work__name">Докладніше...</span>
+          <p class="work__about">Докладніше...</p>
         </a>
         <a class="work" href="">
-          <img class="work__img" src="images/work4.jpg">
-          <span class="work__name">InVersion</span>
+          <img class="work__img" src="images/case1.jpg">
+          <span class="work__name">Докладніше...</span>
+          <p class="work__about">Докладніше...</p>
         </a>
       </div>
     </div>
@@ -88,9 +112,6 @@
     </div>
   </section>
   
-  
-  
-
   <section class="Projects">
     <div class="container">
       <h2 class="project__h2">Відео</h2>
@@ -100,66 +121,123 @@
           <div class="video-item">
             <video class="vid" controls video id="video1" poster="images/poster1.jpg">
               <source src="video/test.mp4" type="video/mp4">
-              Ваш браузер не підтримує відео тег.
             </video>
-            <h4>Відео №1</h4>
+            <img class="iphone" src="images/iphone.png">
+            <h4 class="nameVideo">Відео №1</h4>
           </div>
           <div class="video-item">
             <video class="vid" controls>
               <source src="video/test.mp4" type="video/mp4">
-              Ваш браузер не підтримує відео тег.
             </video>
-            <h4>Відео №0</h4>
+            <img class="iphone" src="images/iphone.png">
+            <h4 class="nameVideo">Відео №1</h4>
           </div>
           <div class="video-item">
             <video class="vid" controls>
               <source src="video/test.mp4" type="video/mp4">
-              Ваш браузер не підтримує відео тег.
             </video>
-            <h4>Відео №2</h4>
+            <img class="iphone" src="images/iphone.png">
+            <h4 class="nameVideo">Відео №1</h4>
           </div>
           <div class="video-item">
             <video class="vid" controls>
               <source src="video/test.mp4" type="video/mp4">
-              Ваш браузер не підтримує відео тег.
             </video>
-            <h4>Відео №3</h4>
+            <img class="iphone" src="images/iphone.png">
+            <h4 class="nameVideo">Відео №1</h4>
           </div>
           <div class="video-item">
             <video class="vid" controls>
               <source src="video/test.mp4" type="video/mp4">
-              Ваш браузер не підтримує відео тег.
             </video>
-            <h4>Відео №4</h4>
+            <img class="iphone" src="images/iphone.png">
+            <h4 class="nameVideo">Відео №1</h4>
           </div>
           <div class="video-item">
             <video class="vid" controls>
               <source src="video/test.mp4" type="video/mp4">
-              Ваш браузер не підтримує відео тег.
             </video>
-            <h4>Відео №5</h4>
+            <img class="iphone" src="images/iphone.png">
+            <h4 class="nameVideo">Відео №1</h4>
           </div>
           <div class="video-item">
             <video class="vid" controls>
               <source src="video/test.mp4" type="video/mp4">
-              Ваш браузер не підтримує відео тег.
             </video>
-            <h4>Відео №6</h4>
+            <img class="iphone" src="images/iphone.png">
+            <h4 class="nameVideo">Відео №1</h4>
           </div>
           <!-- Добавьте больше видео по необходимости -->
         </div>
         <button class="scroll-button right" id="scroll-right">&#9654;</button>
       </div>
+      <div class="arrow-right">
+        <img src="images/ArrowRighr.svg" alt="Гортай далі ->">
+        <p>Гортай далі</p>
+      </div>
     </div>
   </section>
   <canvas id="canvas1" style="display: none;"></canvas> <!-- Canvas для извлечения кадра -->
   
-  
+  <section class="pricing" id="PRISE">
+    <div class="container">
+        <h2>Тарифні Плани</h2>
+        <table class="pricing-table">
+            <thead>
+                <tr>
+                    <th>Тарифний План</th>
+                    <th>Послуги</th>
+                    <th>Ціна (на місяць)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Базовий</td>
+                    <td>
+                        <ul>
+                            <li>Створення контенту</li>
+                            <li>2 пости в тиждень</li>
+                            <li>Аналіз сторінки</li>
+                        </ul>
+                    </td>
+                    <td>$300</td>
+                </tr>
+                <tr>
+                    <td>Стандартний</td>
+                    <td>
+                        <ul>
+                            <li>Створення контенту</li>
+                            <li>3 пости в тиждень</li>
+                            <li>Аналіз сторінки</li>
+                            <li>Відповіді на коментарі</li>
+                        </ul>
+                    </td>
+                    <td>$500</td>
+                </tr>
+                <tr>
+                    <td>Преміум</td>
+                    <td>
+                        <ul>
+                            <li>Створення контенту</li>
+                            <li>Щоденні пости</li>
+                            <li>Аналіз сторінки</li>
+                            <li>Відповіді на коментарі</li>
+                            <li>Запуск рекламних кампаній</li>
+                        </ul>
+                    </td>
+                    <td>$800</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+
+
   <section class="contact" id="CONTACT">
     <div class="container contact__container">
-      <h2 class="contact__h2">Contact Me</h2>
+      <h2 class="contact__h2">Напиши мені в <strong class="inst">Instagram</strong></h2>
       <p class="contact__text">If you are looking to hire a product designer, Im currently available for freelance work</p>
-      <a class="btn contact__btn" href="mailto:hi@yourname.com">hi@yourname.com</a>
+      <a class="btn contact__btn" href="https://www.instagram.com/yesolda_?igsh=MTk1dXV2dTNkMDhmMw==" target="_blank">Instagram <strong class="strong-inst">yesolda_</strong></a>
       </div>
   </section>
 </main>
