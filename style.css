@@ -860,9 +860,9 @@ span{
   }
 }
 
-@media (max-width: 600px){
+@media (max-width: 750px){
   .header__nav {
-    gap: 30px;
+    gap: 20px;
   }
 
   h1{
@@ -886,7 +886,7 @@ span{
   }
 }
 
-@media (max-width: 500px){
+@media (max-width: 650px){
 
   .header {
     position: relative;
