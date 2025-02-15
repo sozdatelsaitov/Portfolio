@@ -251,10 +251,6 @@ h1{
   .works__content p, .works__content ul li {
       font-size: 16px;
   }
-
-  .works__content {
-    /* margin-bottom: 10px; */
-  }
 }
 
 @media (max-width: 500px) {
@@ -288,8 +284,63 @@ h1{
   height: 100%;
   object-fit: cover;
   object-position: top left;
+  /* border-bottom-right-radius: 20px; */
+}
+.green{
+  border-top: 25px solid #457b9d;
+  /* border-radius: 25px; */
+  background-color: #457b9d;
+}
+
+.yellow{
+  border-top: 20px solid #e63946;
+  /* border-radius: 25px; */
+  background-color: #e63946;
+}
+
+.work__text{
+  width: 100%;
+  height: 100%;
   border-radius: 10px;
 }
+
+.case {
+  color: #4e4e4e;
+  box-sizing: border-box;
+  /* max-width: 800px; */
+  margin: auto;
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  height: 100%;
+  overflow-y: auto;
+}
+p.title {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+p.subtitle {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+        /* Кастомізація прокрутки */
+        .case::-webkit-scrollbar {
+          width: 10px;
+      }
+      .case::-webkit-scrollbar-track {
+          background: #f9f9f9;
+          border-radius: 8px;
+      }
+      .case::-webkit-scrollbar-thumb {
+          background: #888;
+          border-radius: 8px;
+      }
+      .case::-webkit-scrollbar-thumb:hover {
+          background: #555;
+      }
 
 .work__name {
   opacity: 0;
@@ -536,7 +587,7 @@ h1{
 }
 
 .scroll-button {
-  /* background-color: rgba(0, 0, 0, 0.5); */
+  /* background-color: rgba(0, 0, 0, 0.5); */ 
   border: none;
   /* color: #fff; */
   cursor: pointer;
