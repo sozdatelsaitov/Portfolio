@@ -1,16 +1,4 @@
-// const header = document.querySelector(".header");
-// const burger = header.querySelector(".burger-menu");
-// const burgerIcon = header.querySelector(".burger-menu_icon");
 
-// burger.addEventListener("click", function(){
-//   header.classList.toggle("header--mobile");
-
-//   if(header.classList.contains("header--mobile")){
-//     burgerIcon.src = "images/close.svg";
-//   } else {
-//     burgerIcon.src = "images/burger.svg";
-//   }
-// });
 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -76,21 +64,9 @@ video1.addEventListener('seeked', () => {
 
 
 // Тёмные цвета
-document.addEventListener("DOMContentLoaded", function() {
-  const textBlocks = document.querySelectorAll('.visual__text-block');
-  const colors = ['#343a40', '#495057', '#212529', '#6c757d', '#000000'];
-
-  textBlocks.forEach(block => {
-    const randomColor = colors[Math.floor(Math.random() * colors.length)];
-    block.style.backgroundColor = randomColor;
-  });
-});
-
-
-// светлые цвета
 // document.addEventListener("DOMContentLoaded", function() {
 //   const textBlocks = document.querySelectorAll('.visual__text-block');
-//   const colors = ['#a8dadc', '#457b9d', '#1d3557', '#e63946', '#f1faee'];
+//   const colors = ['#343a40', '#495057', '#212529', '#6c757d', '#000000'];
 
 //   textBlocks.forEach(block => {
 //     const randomColor = colors[Math.floor(Math.random() * colors.length)];
@@ -98,4 +74,22 @@ document.addEventListener("DOMContentLoaded", function() {
 //   });
 // });
 
+
+// светлые цвета
+document.addEventListener("DOMContentLoaded", function() {
+  const textBlocks = document.querySelectorAll('.visual__text-block');
+  const colors = ['#a8dadc', '#457b9d', '#1d3557', '#e63946', '#f1faee'];
+
+  textBlocks.forEach(block => {
+    const randomColor = colors[Math.floor(Math.random() * colors.length)];
+    block.style.backgroundColor = randomColor;
+  });
+});
+
   
+document.addEventListener('DOMContentLoaded', function() {
+  document.getElementById('worksBtn').addEventListener('click', function() {
+      var content = document.getElementById('worksContent');
+      content.classList.toggle('open');
+  });
+});
