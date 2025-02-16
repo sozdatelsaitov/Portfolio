@@ -93,3 +93,11 @@ document.addEventListener('DOMContentLoaded', function() {
       content.classList.toggle('open');
   });
 });
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  document.getElementById('aboutCaseBtn').addEventListener('click', function() {
+      var content = document.getElementById('worksContent');
+      content.classList.toggle('open');
+  });
+});

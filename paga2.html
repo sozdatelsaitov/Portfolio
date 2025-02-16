@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="globals.css">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="styleCase1.css">
   <title>Portfolio Designer</title>
 </head>
 <body>
@@ -26,70 +27,105 @@
 <main class="main">
   <section class="welcome">
     <div class="container main__container">
-      <div class="welcome__desc">
-        <h1>Hi, I am Your Name
-          A Product Designer 
-          based in City.</h1>
-        <p class="welcome__text">I help businesses and companies reach 
-          their goals by designing user-centric digital 
-          products & interactive experiences.</p>
-          <a class="btn walcome__btn" href="https://www.instagram.com/yesolda_?igsh=MTk1dXV2dTNkMDhmMw==" target="_blank">Instagram <strong class="strong-inst">yesolda_</strong></a>
+      <div class="case__welcome__desc">
+        <h1>“СТО Бровари”</h1>
+          <img src="images/2logo.jpg" alt="Me" class="case__welcome__img">
+        <p class="case__welcome__LogText">Опис:</p>
+          <p class="case__welcome__text">I help businesses and companies reach 
+            their goals by designing user-centric digital 
+            products & interactive experiences.</p>
       </div>
-        <img src="images/me.jpg" alt="Me" class="welcome__img">
-    </div>
-  </section>
-
-  <section class="visual">
-    <div class="container">
-      <h2 class="visual__h2">Фото</h2>
-      <div class="visual__wrapper">
-        <img class="visual__img visual__img--large" src="q1.jpg">
-        <div class="visual__text-block">#Енергія</div>
-        <img class="visual__img" src="qwe2.jpg">
-        <div class="visual__text-block visual__text-block--medium">#Натхнення</div>
-        <img class="visual__img visual__img--medium" src="qwe3.jpg">
-        <img class="visual__img visual__img--tall" src="qwe4.jpg">
-        <div class="visual__text-block">#ВашВибір</div>
-        <img class="visual__img" src="qwe5.jpg">
-        <img class="visual__img" src="qwe6.jpg">
-        <div class="visual__text-block">#Україна</div>
-        <img class="visual__img" src="qwe7.jpg">
-        <img class="visual__img" src="qwe8.jpg">
-        <div class="visual__text-block">#Мода</div>
-        <img class="visual__img" src="qwe9.jpg">
-        <img class="visual__img" src="q2.jpeg">
+      <div class="gridLogo">
+        <img class="gridImg" src="images/2gridImage.jpg">
+        <img class="gridImg" src="images/2gridImage.jpg">
+        <img class="gridImg" src="images/2gridImage.jpg">
+        <img class="gridImg" src="images/2gridImage.jpg">
+        <img class="gridImg" src="images/2gridImage.jpg">
+        <img class="gridImg" src="images/2gridImage.jpg">
+        <img class="gridImg" src="images/2gridImage.jpg">
+        <img class="gridImg" src="images/2gridImage.jpg">
+        <img class="gridImg" src="images/2gridImage.jpg">
       </div>
     </div>
   </section>
-  
-  <section class="Projects">
-    <div class="container">
-      <h2 class="project__h2">Відео</h2>
-      <div class="video-wrapper">
-        <button class="scroll-button left" id="scroll-left">&#9664;</button>
-        <div class="video-container" id="video-container">
-          <div class="video-item">
-            <video class="vid" controls video id="video1" poster="images/poster1.jpg">
-              <source src="" type="video/mp4">
-            </video>
 
-          </div>
-        </div>
-        <button class="scroll-button right" id="scroll-right">&#9654;</button>
-      </div>
+
+<section class="clientOll">
+  <div class="container">
+  <div class="client-top">
+    <p class="case__clientOll__Texttop">client</p>
+    <p class="case__clientOll__Texttop">role</p>
+    <p class="case__clientOll__Texttop">industry</p>
+    <p class="case__clientOll__Texttop">duration</p>                              
+  </div>
+  <div class="client-bottom">
+    <p class="case__clientOll__Textbottom">Covibe</p>
+    <p class="case__clientOll__Textbottom">Product Designer</p>
+    <p class="case__clientOll__Textbottom">Co-working</p>
+    <p class="case__clientOll__Textbottom">2 Months</p>
+  </div>
+<div class="aboutCase">
+  <p class="aboutCase__TEXT">Designing a product</p>
+  <p class="aboutCase__text">I help businesses and companies reach their goals by designing user-centric digital products & interactive experiences. I help businesses and companies reach their goals by designing user-centric digital products & interactive experiences.I help businesses and companies reach their goals by designing user-centric digital products & interactive experiences.</p>
+</div>
+<button id="aboutCaseBtn">Докладніше...</button>
+<div class="aboutCaseContent" id="aboutCaseContent">
+  <p>Привіт! Мене звати [Ваше Ім'я], і я спеціаліст з SMM (соціального медіа маркетингу) з [кількість] років досвіду. Протягом своєї кар'єри я допомагав бізнесам різних галузей зростати і досягати своїх цілей через ефективну роботу з соціальними мережами.</p>
+  <h3>Мої навички та досвід:</h3>
+  <p>Якщо вам потрібен надійний і професійний спеціаліст з SMM, я готовий допомогти вашому бізнесу досягти нових висот! Давайте обговоримо ваші цілі та як ми можемо разом їх реалізувати.</p>
+</div>
+
+<img class="imageClsentOll" src="images/imageClsentOll.jpg">
+</div>
+</section>
+
+<section class="Case1-Works">
+  <div class="container">
+    <div class="Case1-Works__1step">
+    <img src="images/Case1-Work.jpg">
+    <div class="Case1-WorkTexts">
+      <p class="Case1-Work__TEXT">solution 1</p>
+      <p class="Case1-Work__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
     </div>
-  </section>
-  <canvas id="canvas1" style="display: none;"></canvas> <!-- Canvas для извлечения кадра -->
-  
-  
+  </div>
+  <div class="Case1-Works__2step">
+    <div class="Case1-WorkTexts">
+      <p class="Case1-Work__TEXT">solution 1</p>
+      <p class="Case1-Work__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+    </div>
+    <img src="images/Case1-Work.jpg">
+  </div>
+  <div class="Case1-Works__1step step3">
+    <img src="images/Case1-Work.jpg">
+    <div class="Case1-WorkTexts">
+      <p class="Case1-Work__TEXT">solution 1</p>
+      <p class="Case1-Work__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+    </div>
+  </div>
+  </div>
+</section>
 
-  <section class="contact" id="CONTACT">
-    <div class="container contact__container">
-      <h2 class="contact__h2">Напиши мені в <strong class="inst">Instagram</strong></h2>
-      <p class="contact__text">If you are looking to hire a product designer, Im currently available for freelance work</p>
-      <a class="btn contact__btn" href="https://www.instagram.com/yesolda_?igsh=MTk1dXV2dTNkMDhmMw==" target="_blank">Instagram <strong class="strong-inst">yesolda_</strong></a>
-      </div>
-  </section>
+<section class="Itog">
+  <div class="container">
+<div class="aboutCase">
+  <p class="aboutCase__TEXT">Conclusion</p>
+  <p class="aboutCase__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae aenean aliquet pellentesque lectus. Libero convallis velit, morbi nullam pellentesque quis. Massa nascetur in commodo posuere porttitor.</p>
+</div>
+<button id="aboutCaseBtn">Докладніше...</button>
+
+<img class="imageClsentOll" src="images/imageClsentOll.jpg">
+</div>
+
+<a href="" class="nextCase">Наступний кейс</a>
+</section>
+
+<section class="contact" id="CONTACT">
+  <div class="container contact__container">
+    <h2 class="contact__h2">Напиши мені в <strong class="inst">Instagram</strong></h2>
+    <p class="contact__text">If you are looking to hire a product designer, Im currently available for freelance work</p>
+    <a class="btn contact__btn" href="https://www.instagram.com/yesolda_?igsh=MTk1dXV2dTNkMDhmMw==" target="_blank">Instagram <strong class="strong-inst">yesolda_</strong></a>
+    </div>
+</section>
 </main>
 
 <footer class="footer">
