@@ -130,7 +130,7 @@ h1{
   content: url('images/inst.svg');
 }
 .btn:hover {
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.555);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.192);
 }
 
 .inst{
@@ -302,13 +302,15 @@ h1{
 .case-item {
   flex: 0 0 auto;
   display: flex;
+  justify-content: center;
+  align-items: center;
   margin: 20px;
   color: #DEDEDE;
   position: relative;
 }
 @media (max-width: 750px){
   .case-item {
-    margin: 0;
+    margin: 5px;
   }
 }
 
@@ -332,11 +334,9 @@ h1{
   overflow: hidden; /* Защита от выпадения элементов */
 }
 
-@media (max-width: 950px){
-  .grids{
-    grid-template-columns: 1fr;
-  }
-}
+
+
+
 
 .gridLogo {
   display: grid;
@@ -356,9 +356,44 @@ h1{
   display: block; /* Убираем лишние отступы у inline-элементов */
 }
 
+/* @media (max-width: 1050px){
 
+} */
 
+@media (max-width: 1050px){
+  .grids{
+    grid-template-columns: 1fr;
+  }
+  .gridImg {
+    height: 410px;
+  }
+}
 
+@media (max-width: 850px){
+  .gridImg {
+    height: 350px;
+  }
+}
+@media (max-width: 750px){
+  .gridImg {
+    height: 280px;
+  }
+}
+@media (max-width: 600px){
+  .gridImg {
+    height: 230px;
+  }
+}
+@media (max-width: 450px){
+  .gridImg {
+    height: 200px;
+  }
+}
+@media (max-width: 375px){
+  .gridImg {
+    height: 160px;
+  }
+}
 
 .works__wrapper {
   display: grid;
@@ -880,6 +915,38 @@ p.subtitle {
   -webkit-appearance: none; /* Убирает стандартное оформление ползунка для WebKit браузеров */
   appearance: none; /* Убирает стандартное оформление ползунка для всех браузеров */
   border-radius: 50%;
+}
+
+/* Стиль ползунка для Chrome, Safari */
+#planSlider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 34px;
+  height: 34px;
+  background: #ff6f61;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+/* Увеличение при наведении */
+#planSlider::-webkit-slider-thumb:hover {
+  transform: scale(1.2);
+}
+
+/* Стиль ползунка для Firefox */
+#planSlider::-moz-range-thumb {
+  width: 34px;
+  height: 34px;
+  background: #ff6f61;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+/* Увеличение при наведении в Firefox */
+#planSlider::-moz-range-thumb:hover {
+  transform: scale(1.2);
 }
 
 #planSlider::-webkit-slider-runnable-track {

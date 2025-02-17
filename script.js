@@ -181,3 +181,8 @@ planSlider.addEventListener('input', updateSlider);
 
 // Инициализация начального состояния
 updateSlider();
+
+
+
+
+
