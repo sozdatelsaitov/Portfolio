@@ -94,3 +94,6 @@ document.addEventListener('DOMContentLoaded', function() {
       content.classList.toggle('open');
   });
 });
+
+
+
