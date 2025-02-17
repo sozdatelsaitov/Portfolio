@@ -66,6 +66,29 @@
     </div>
   </section>
 
+  <section class="visual">
+    <div class="container">
+      <h2 class="visual__h2">Фото</h2>
+      <div class="visual__wrapper">
+        <img class="visual__img visual__img--large" src="q1.jpg">
+        <div class="visual__text-block">#Енергія</div>
+        <img class="visual__img" src="qwe2.jpg">
+        <div class="visual__text-block visual__text-block--medium">#Натхнення</div>
+        <img class="visual__img visual__img--medium" src="qwe3.jpg">
+        <img class="visual__img visual__img--tall" src="qwe4.jpg">
+        <div class="visual__text-block">#ВашВибір</div>
+        <img class="visual__img" src="qwe5.jpg">
+        <img class="visual__img" src="qwe6.jpg">
+        <div class="visual__text-block">#Україна</div>
+        <img class="visual__img" src="qwe7.jpg">
+        <img class="visual__img" src="qwe8.jpg">
+        <div class="visual__text-block">#Мода</div>
+        <img class="visual__img" src="qwe9.jpg">
+        <img class="visual__img" src="q2.jpeg">
+      </div>
+    </div>
+  </section>
+
   <section class="Cases">
     <div class="container">
       <h2 class="project__h2">Мої кейси</h2>
@@ -99,10 +122,11 @@
         </div>
         <button class="scroll-button-case right" id="case__scroll-right">&#9654;</button>
       </div>
-      <div class="arrow-right">
+      <!-- <div class="arrow-right">
         <img src="images/ArrowRighr.svg" alt="Гортай далі ->">
         <p>Гортай далі</p>
-      </div>
+      </div> -->
+      <h2 class="project__h2">Візуал</h2>
       <div class="grids">
         <div class="gridLogo">
           <img class="gridImg" src="images/2gridImage.jpg">
@@ -129,31 +153,6 @@
       </div>
     </div>
   </section>
-
-  <section class="visual">
-    <div class="container">
-      <h2 class="visual__h2">Фото</h2>
-      <div class="visual__wrapper">
-        <img class="visual__img visual__img--large" src="q1.jpg">
-        <div class="visual__text-block">#Енергія</div>
-        <img class="visual__img" src="qwe2.jpg">
-        <div class="visual__text-block visual__text-block--medium">#Натхнення</div>
-        <img class="visual__img visual__img--medium" src="qwe3.jpg">
-        <img class="visual__img visual__img--tall" src="qwe4.jpg">
-        <div class="visual__text-block">#ВашВибір</div>
-        <img class="visual__img" src="qwe5.jpg">
-        <img class="visual__img" src="qwe6.jpg">
-        <div class="visual__text-block">#Україна</div>
-        <img class="visual__img" src="qwe7.jpg">
-        <img class="visual__img" src="qwe8.jpg">
-        <div class="visual__text-block">#Мода</div>
-        <img class="visual__img" src="qwe9.jpg">
-        <img class="visual__img" src="q2.jpeg">
-      </div>
-    </div>
-  </section>
-  
-
   
   <section class="Projects">
     <div class="container">
@@ -208,58 +207,44 @@
   
   <section class="pricing" id="PRISE">
     <div class="container">
-        <h2>Тарифні Плани</h2>
-        <table class="pricing-table">
+      <h2>Тарифні Плани</h2>
+      <div class="nameTarifs">
+        <p class="tarif">Базовий</p>
+        <p class="tarif">Стандартний</p>
+        <p class="tarif">Преміум</p>
+      </div>
+      <input type="range" id="planSlider" min="0" max="2" step="1" value="0">
+      <div class="pricing-table-wrapper">
+        <div class="pricing-table" id="pricingTable">
+          <!-- Базовый план по умолчанию -->
+          <table>
             <thead>
-                <tr>
-                    <th>Тарифний План</th>
-                    <th>Послуги</th>
-                    <th>Ціна (на місяць)</th>
-                </tr>
+              <tr>
+                <th>Тарифний План</th>
+                <th>Послуги</th>
+                <th>Ціна (на місяць)</th>
+              </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>Базовий</td>
-                    <td>
-                        <ul>
-                            <li>Створення контенту</li>
-                            <li>2 пости в тиждень</li>
-                            <li>Аналіз сторінки</li>
-                        </ul>
-                    </td>
-                    <td>$300</td>
-                </tr>
-                <tr>
-                    <td>Стандартний</td>
-                    <td>
-                        <ul>
-                            <li>Створення контенту</li>
-                            <li>3 пости в тиждень</li>
-                            <li>Аналіз сторінки</li>
-                            <li>Відповіді на коментарі</li>
-                        </ul>
-                    </td>
-                    <td>$500</td>
-                </tr>
-                <tr>
-                    <td>Преміум</td>
-                    <td>
-                        <ul>
-                            <li>Створення контенту</li>
-                            <li>Щоденні пости</li>
-                            <li>Аналіз сторінки</li>
-                            <li>Відповіді на коментарі</li>
-                            <li>Запуск рекламних кампаній</li>
-                        </ul>
-                    </td>
-                    <td>$800</td>
-                </tr>
+              <tr>
+                <td>Базовий</td>
+                <td>
+                  <ul>
+                    <li>Створення контенту</li>
+                    <li>2 пости в тиждень</li>
+                    <li>Аналіз сторінки</li>
+                  </ul>
+                </td>
+                <td>$300</td>
+              </tr>
             </tbody>
-        </table>
+          </table>
+        </div>
     </div>
-</section>
-
-
+    </div>
+  </section>
+  
+  
   <section class="contact" id="CONTACT">
     <div class="container contact__container">
       <h2 class="contact__h2">Напиши мені в <strong class="inst">Instagram</strong></h2>

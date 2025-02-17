@@ -168,7 +168,6 @@ h1{
   margin-top: 20px;
   padding: 0 15px;
   color: #DEDEDE;
-  /* margin-bottom: 80px; */
   transition: 0.5s;
 }
 
@@ -290,6 +289,11 @@ h1{
   margin: 20px;
   color: #DEDEDE;
   position: relative;
+}
+@media (max-width: 750px){
+  .case-item {
+    margin: 0;
+  }
 }
 
 .caseImg{
@@ -438,7 +442,7 @@ p.subtitle {
 /* Визуал секция */
 
 .visual__h2{
-  margin: 378px auto 65px;
+  margin: 178px auto 65px;
   font-family: 'Manrope';
   font-style: normal;
   font-weight: 700;
@@ -578,13 +582,7 @@ p.subtitle {
     grid-column: unset;
     grid-row: unset;
   }
-  /* .visual__text-block{
-    display: none;
-  } */
-
 }
-
-
 
 
 /* Проекты */
@@ -625,7 +623,6 @@ p.subtitle {
 .video-item {
   flex: 0 0 auto;
   margin: 20px;
-  /* background: linear-gradient(100deg, #202020, #323232); */
   border-radius: 50px;
   color: #DEDEDE;
   background-color: black;
@@ -648,9 +645,44 @@ p.subtitle {
   left: -1px;
 }
 
+@media (max-width: 950px) {
+  .vid{
+    height: 638.4px;
+    width: 358.4px;
+  
+  }
+  .iphone{
+    height: 700px;
+    top: -10px;
+    left: -1px;
+  }
+}
 
+@media (max-width: 410px) {
+  .vid{
+    height: 570px;
+    width: 320px;
+  
+  }
+  .iphone{
+    height: 630px;
+    top: -10px;
+    left: -1px;
+  }
+}
 
-
+@media (max-width: 370px) {
+  .vid{
+    height: 484px;
+    width: 272px;
+  
+  }
+  .iphone{
+    height: 541px;
+    top: -10px;
+    left: -1px;
+  }
+}
 
 .nameVideo{
   text-align: center;
@@ -682,7 +714,6 @@ p.subtitle {
 }
 
 /* Прайс */
-
 .pricing {
   background-color: #202020;
   color: #DEDEDE;
@@ -702,41 +733,158 @@ p.subtitle {
   margin-bottom: 40px;
 }
 
-.pricing-table {
+.pricing-table table {
   width: 100%;
   border-collapse: collapse;
-  font-family: "Manrope", sans-serif;
-  font-size: 18px;
+  
 }
 
-.pricing-table th,
-.pricing-table td {
-  border: 1px solid #444;
-  padding: 20px;
+.pricing-table th, .pricing-table td {
+  padding: 16px; /* Увеличиваем отступы */
+  font-size: 18px; /* Увеличиваем размер шрифта */
+  text-align: center;
+  border-bottom: 1px solid #444;
+  
 }
 
 .pricing-table th {
   background-color: #323232;
-  font-weight: 700;
-}
-
-.pricing-table td {
-  background-color: #2a2a2a;
+  font-weight: bold;
 }
 
 .pricing-table ul {
-  list-style: none;
-  padding-left: 0;
+  list-style-type: none;
+  padding: 0;
   margin: 0;
 }
 
 .pricing-table ul li {
-  margin-bottom: 10px;
+  margin-bottom: 8px; /* Увеличиваем отступы между элементами списка */
+  font-size: 18px; /* Увеличиваем размер шрифта */
 }
 
 .pricing-table td:last-child {
   font-weight: 700;
   font-size: 24px;
+  background-color: #2a2a2a;
+}
+
+.slider-wrapper {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.slider-container {
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+  scroll-behavior: smooth;
+}
+
+.pricing-table {
+  width: 100%;
+  max-width: 1250px; /* Задайте максимальную ширину для таблицы */
+  margin: auto; /* Центрирование таблицы */
+  transition: opacity 0.5s ease;
+}
+
+.pricing-table-wrapper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  margin-top: 30px;
+}
+
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: transparent;
+  border: none;
+  color: #000;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.slider-btn.left {
+  left: 10px;
+}
+
+.slider-btn.right {
+  right: 10px;
+}
+
+#planSlider {
+  width: 70%;
+  margin: 20px 0;
+  -webkit-appearance: none; /* Убирает стандартное оформление ползунка для WebKit браузеров */
+  appearance: none; /* Убирает стандартное оформление ползунка для всех браузеров */
+  border-radius: 50%;
+}
+
+#planSlider::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 16px;
+  background: #ddd;
+  border-radius: 18px;
+  position: relative;
+}
+
+#planSlider::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Убирает стандартное оформление бегунка для WebKit браузеров */
+  appearance: none; /* Убирает стандартное оформление бегунка для всех браузеров */
+  width: 34px; /* Увеличиваем размер бегунка */
+  height: 34px; /* Увеличиваем размер бегунка */
+  background: #ff6f61;
+  cursor: pointer;
+  border-radius: 50%;
+  margin-top: -9px; /* Поднятие бегунка для центрирования */
+}
+
+#planSlider::-moz-range-track {
+  width: 100%;
+  height: 16px; /* Увеличиваем высоту дорожки */
+  background: #ddd;
+  border-radius: 8px;
+}
+
+#planSlider::-moz-range-thumb {
+  width: 34px; /* Увеличиваем размер бегунка */
+  height: 34px; /* Увеличиваем размер бегунка */
+  background: #ff6f61;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+/* Добавление разделителей */
+#planSlider::before, #planSlider::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 1px;
+  height: 16px;
+  background: #000;
+  transform: translateY(-50%);
+}
+
+#planSlider::before {
+  left: 33.3%;
+}
+
+#planSlider::after {
+  right: 33.3%;
+}
+
+.nameTarifs{
+  width: 75%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
 }
 
 /* Адаптивні стилі для малих екранів */
@@ -966,7 +1114,6 @@ span{
     padding: 8px;
     background-color: #202020;
     opacity: 0.7;
-    /* color: #FF6F61; */
     color:#DEDEDE;
     font-weight: 500;
     font-size: 15px;
@@ -975,7 +1122,6 @@ span{
 }
 
 @media (max-width: 750px){
-
   .welcome__img {
     width: 340px;
     height: 340px;
@@ -1009,7 +1155,6 @@ span{
 }
 
 @media (max-width: 650px){
-
   .header {
     position: relative;
   }
@@ -1020,13 +1165,14 @@ span{
     align-items: center;
     flex-direction: row !important; /* Принудительно строка */
   }
-/* //////////////////////////// */
+
   .burger-menu {
     display: block;
     position: absolute;
     right: 25px;
     top: 30px;
   }
+
   .burger-img {
     height: 30px;
   }
@@ -1060,7 +1206,6 @@ span{
     gap: 15px;
   }
 
-/* //////////////////////////////////////////////////////////////////////////// */
   .welcome__img {
     width: 240px;
     height: 240px;

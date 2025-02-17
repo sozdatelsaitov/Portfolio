@@ -97,3 +97,64 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
+const planSlider = document.getElementById('planSlider');
+const pricingTable = document.getElementById('pricingTable');
+
+const plans = [
+  {
+    name: 'Базовий',
+    services: [
+      'Створення контенту',
+      '2 пости в тиждень',
+      'Аналіз сторінки'
+    ],
+    price: '$300'
+  },
+  {
+    name: 'Стандартний',
+    services: [
+      'Створення контенту',
+      '3 пости в тиждень',
+      'Аналіз сторінки',
+      'Відповіді на коментарі'
+    ],
+    price: '$500'
+  },
+  {
+    name: 'Преміум',
+    services: [
+      'Створення контенту',
+      'Щоденні пости',
+      'Аналіз сторінки',
+      'Відповіді на коментарі',
+      'Запуск рекламних кампаній'
+    ],
+    price: '$800'
+  }
+];
+
+planSlider.addEventListener('input', () => {
+  const plan = plans[planSlider.value];
+  pricingTable.innerHTML = `
+    <table>
+      <thead>
+        <tr>
+          <th>Тарифний План</th>
+          <th>Послуги</th>
+          <th>Ціна (на місяць)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>${plan.name}</td>
+          <td>
+            <ul>
+              ${plan.services.map(service => `<li>${service}</li>`).join('')}
+            </ul>
+          </td>
+          <td>${plan.price}</td>
+        </tr>
+      </tbody>
+    </table>
+  `;
+});
