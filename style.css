@@ -627,8 +627,8 @@ p.subtitle {
 }
 
 .vid{
-  border-top-left-radius: 40px;  /* Закругление левого верхнего угла */
-  border-top-right-radius: 40px; /* Закругление правого верхнего угла */
+  border-top-left-radius: 55px;  /* Закругление левого верхнего угла */
+  border-top-right-radius: 55px; /* Закругление правого верхнего угла */
   height: 570px;
   width: 320px;
 
@@ -644,25 +644,77 @@ p.subtitle {
 
 @media (max-width: 950px) {
   .vid{
-    height: 638.4px;
-    width: 358.4px;
+    height: 798px;
+    width: 448px;
   
   }
   .iphone{
-    height: 700px;
+    height: 863px;
     top: -10px;
     left: -1px;
   }
 }
 
-@media (max-width: 410px) {
+@media (max-width: 510px) {
   .vid{
-    height: 570px;
-    width: 320px;
+    height: 718.2px;
+    width: 439.2px;
   
   }
   .iphone{
-    height: 630px;
+    height: 781px;
+    top: -10px;
+    left: -1px;
+  }
+}
+
+@media (max-width: 490px) {
+  .vid{
+    height: 658px;
+    width: 406px;
+  
+  }
+  .iphone{
+    height: 719px;
+    top: -10px;
+    left: -1px;
+  }
+}
+
+@media (max-width: 455px) {
+  .vid{
+    height: 592px;
+    width: 365px;
+  
+  }
+  .iphone{
+    height: 653px;
+    top: -10px;
+    left: -1px;
+  }
+}
+
+@media (max-width: 430px) {
+  .vid{
+    height: 627px;
+    width: 352px;
+  
+  }
+  .iphone{
+    height: 685px;
+    top: -10px;
+    left: -1px;
+  }
+}
+
+@media (max-width: 400px) {
+  .vid{
+    height: 564px;
+    width: 316px;
+  
+  }
+  .iphone{
+    height: 622px;
     top: -10px;
     left: -1px;
   }
