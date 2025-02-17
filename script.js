@@ -100,40 +100,44 @@ document.addEventListener('DOMContentLoaded', function() {
 const planSlider = document.getElementById('planSlider');
 const pricingTable = document.getElementById('pricingTable');
 
+const basicLabel = document.getElementById('basicLabel');
+const standardLabel = document.getElementById('standardLabel');
+const premiumLabel = document.getElementById('premiumLabel');
+
 const plans = [
   {
     name: 'Базовий',
     services: [
-      'Створення контенту',
-      '2 пости в тиждень',
-      'Аналіз сторінки'
+      '- Створення контенту',
+      '- 2 пости в тиждень',
+      '- Аналіз сторінки'
     ],
     price: '$300'
   },
   {
     name: 'Стандартний',
     services: [
-      'Створення контенту',
-      '3 пости в тиждень',
-      'Аналіз сторінки',
-      'Відповіді на коментарі'
+      '- Створення контенту',
+      '- 3 пости в тиждень',
+      '- Аналіз сторінки',
+      '- Відповіді на коментарі'
     ],
     price: '$500'
   },
   {
     name: 'Преміум',
     services: [
-      'Створення контенту',
-      'Щоденні пости',
-      'Аналіз сторінки',
-      'Відповіді на коментарі',
-      'Запуск рекламних кампаній'
+      '- Створення контенту',
+      '- Щоденні пости',
+      '- Аналіз сторінки',
+      '- Відповіді на коментарі',
+      '- Запуск рекламних кампаній'
     ],
     price: '$800'
   }
 ];
 
-planSlider.addEventListener('input', () => {
+function updateSlider() {
   const plan = plans[planSlider.value];
   pricingTable.innerHTML = `
     <table>
@@ -157,4 +161,23 @@ planSlider.addEventListener('input', () => {
       </tbody>
     </table>
   `;
-});
+
+  // Сброс всех классов активности
+  basicLabel.classList.remove('active');
+  standardLabel.classList.remove('active');
+  premiumLabel.classList.remove('active');
+
+  // Установление класса активности на основе значения ползунка
+  if (planSlider.value == 0) {
+    basicLabel.classList.add('active');
+  } else if (planSlider.value == 1) {
+    standardLabel.classList.add('active');
+  } else if (planSlider.value == 2) {
+    premiumLabel.classList.add('active');
+  }
+}
+
+planSlider.addEventListener('input', updateSlider);
+
+// Инициализация начального состояния
+updateSlider();

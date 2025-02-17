@@ -1,12 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Pacifico&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
 html{
   scroll-behavior: smooth;
 }
 
 body{
-  font-family: "Manrope", sans-serif;
+  /* font-family: "Raleway"; */
+  font-family: "Nunito";
   background-color: #202020;
   color: #959595;
   font-weight: 600;
@@ -15,11 +18,16 @@ body{
   letter-spacing: -0.03em;
 }
 
+h1,
+h2,
+h3{
+  font-family: "Raleway";
+}
+
+
+
 img{
   max-width: 100%;
-}
-a:hover{
-  color: #c8c8c8;
 }
 
 .container{
@@ -121,6 +129,9 @@ h1{
 .btn::before{
   content: url('images/inst.svg');
 }
+.btn:hover {
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.555);
+}
 
 .inst{
   font-family: "Lobster", serif;
@@ -152,7 +163,12 @@ h1{
   display: inline-flex;
   align-items: center;
   gap: 26px;
-  
+  opacity: 0.8;
+}
+
+.works__btn:hover{
+  opacity: 1;
+  text-decoration: underline;
 }
 
 .works__btn::before{
@@ -191,7 +207,7 @@ h1{
 
 /* Стилі для заголовків */
 .works__content h3 {
-  font-family: "Manrope", sans-serif;
+  /* font-family: "Manrope", sans-serif; */
   font-weight: 700;
   color: #FFF;
 }
@@ -204,7 +220,7 @@ h1{
 
 /* Стилі для текстових абзаців */
 .works__content p {
-  font-family: "Manrope", sans-serif;
+  /* font-family: "Manrope", sans-serif; */
   font-weight: 500;
   font-size: 18px;
   line-height: 1.6;
@@ -219,7 +235,7 @@ h1{
 }
 
 .works__content ul li {
-  font-family: "Manrope", sans-serif;
+  /* font-family: "Manrope", sans-serif; */
   font-weight: 500;
   font-size: 18px;
   line-height: 1.6;
@@ -416,25 +432,6 @@ p.subtitle {
           background: #555;
       }
 
-.work__name {
-  opacity: 0;
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #2929298f;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-weight: 700;
-  font-size: 40px;
-  transition: 0.3s;
-}
-.work__name:hover {
-  opacity: 1;
-}
-
 .work__about{
   display: none;
 }
@@ -443,7 +440,7 @@ p.subtitle {
 
 .visual__h2{
   margin: 178px auto 65px;
-  font-family: 'Manrope';
+  /* font-family: 'Manrope'; */
   font-style: normal;
   font-weight: 700;
   font-size: 36px;
@@ -588,7 +585,7 @@ p.subtitle {
 /* Проекты */
 .project__h2{
   margin: 180px auto 65px;
-  font-family: 'Manrope';
+  /* font-family: 'Manrope'; */
   font-style: normal;
   font-weight: 700;
   font-size: 36px;
@@ -727,7 +724,7 @@ p.subtitle {
 }
 
 .pricing h2 {
-  font-family: "Manrope", sans-serif;
+  /* font-family: "Manrope", sans-serif; */
   font-weight: 700;
   font-size: 36px;
   margin-bottom: 40px;
@@ -742,7 +739,7 @@ p.subtitle {
 .pricing-table th, .pricing-table td {
   padding: 16px; /* Увеличиваем отступы */
   font-size: 18px; /* Увеличиваем размер шрифта */
-  text-align: center;
+  /* text-align: center; */
   border-bottom: 1px solid #444;
   
 }
@@ -887,6 +884,18 @@ p.subtitle {
   justify-content: space-between;
 }
 
+.tarif {
+  color: #959595; /* Обычный цвет текста */
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.5;
+  letter-spacing: -0.03em;
+}
+
+.tarif.active {
+  color: #ff6f61; /* Цвет активного текста */
+}
+
 /* Адаптивні стилі для малих екранів */
 @media (max-width: 768px) {
   .pricing-table th,
@@ -896,6 +905,10 @@ p.subtitle {
   }
   .pricing {
     margin-top: 100px;
+  }
+
+  .tarif {
+    font-size: 15px;
   }
 }
 
@@ -907,6 +920,10 @@ p.subtitle {
     }
     .pricing {
       margin-top: 150px;
+    }
+
+    .tarif {
+      font-size: 12px;
     }
 }
 
