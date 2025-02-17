@@ -46,20 +46,20 @@ scrollRightButton.addEventListener('click', () => {
 
 
 
-// Извлечение первого кадра видео
-const video1 = document.getElementById('video1');
-const canvas1 = document.getElementById('canvas1');
-const context1 = canvas1.getContext('2d');
+// // Извлечение первого кадра видео
+// const video1 = document.getElementById('video1');
+// const canvas1 = document.getElementById('canvas1');
+// // const context1 = canvas1.getContext('2d');
 
-video1.addEventListener('loadeddata', () => {
-  video1.currentTime = 1; // Перемотка на первую секунду
-});
+// video1.addEventListener('loadeddata', () => {
+//   video1.currentTime = 1; // Перемотка на первую секунду
+// });
 
-video1.addEventListener('seeked', () => {
-  context1.drawImage(video1, 0, 0, canvas1.width, canvas1.height);
-  const posterDataUrl = canvas1.toDataURL('image/jpeg');
-  video1.setAttribute('poster', posterDataUrl);
-});
+// video1.addEventListener('seeked', () => {
+//   context1.drawImage(video1, 0, 0, canvas1.width, canvas1.height);
+//   const posterDataUrl = canvas1.toDataURL('image/jpeg');
+//   video1.setAttribute('poster', posterDataUrl);
+// });
 
 
 
@@ -89,14 +89,6 @@ document.addEventListener("DOMContentLoaded", function() {
   
 document.addEventListener('DOMContentLoaded', function() {
   document.getElementById('worksBtn').addEventListener('click', function() {
-      var content = document.getElementById('worksContent');
-      content.classList.toggle('open');
-  });
-});
-
-
-document.addEventListener('DOMContentLoaded', function() {
-  document.getElementById('aboutCaseBtn').addEventListener('click', function() {
       var content = document.getElementById('worksContent');
       content.classList.toggle('open');
   });
