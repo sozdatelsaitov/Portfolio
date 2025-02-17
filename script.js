@@ -21,6 +21,24 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
+const caseContainer = document.getElementById('case-container'); 
+const caseScrollLeftButton = document.getElementById('case__scroll-left'); 
+const caseScrollRightButton = document.getElementById('case__scroll-right'); 
+const caseScrollStep = 200; // Шаг прокрутки в пикселях 
+const caseScrollInterval = 2000; // Интервал прокрутки в миллисекундах 
+// // Прокрутка при клике 
+caseScrollLeftButton.addEventListener('click', () => { caseContainer.scrollBy({ top: 0, left: -caseScrollStep, behavior: 'smooth' }); }); 
+caseScrollRightButton.addEventListener('click', () => { caseContainer.scrollBy({ top: 0, left: caseScrollStep, behavior: 'smooth' }); }); // Автоматическая прокрутка 
+let autoScroll = setInterval(() => { caseContainer.scrollBy({ top: 0, left: caseScrollStep, behavior: 'smooth' }); // Останавливаем прокрутку, когда достигаем конца 
+if (caseContainer.scrollLeft + caseContainer.clientWidth >= caseContainer.scrollWidth) 
+  { caseContainer.scrollTo({ left: 0, behavior: 'smooth' }); 
+} }, caseScrollInterval); // Пауза прокрутки при наведении курсора 
+caseContainer.addEventListener('mouseenter', () => { clearInterval(autoScroll); }); 
+caseContainer.addEventListener('mouseleave', () => { autoScroll = setInterval(() => { caseContainer.scrollBy({ top: 0, left: caseScrollStep, behavior: 'smooth' }); // Останавливаем прокрутку, когда достигаем конца 
+if (caseContainer.scrollLeft + caseContainer.clientWidth >= caseContainer.scrollWidth) { caseContainer.scrollTo({ left: 0, behavior: 'smooth' }); 
+} }, caseScrollInterval); 
+});
+
 const container = document.getElementById('video-container');
 const scrollLeftButton = document.getElementById('scroll-left');
 const scrollRightButton = document.getElementById('scroll-right');
@@ -43,23 +61,6 @@ scrollRightButton.addEventListener('click', () => {
   });
 });
 
-
-
-
-// // Извлечение первого кадра видео
-// const video1 = document.getElementById('video1');
-// const canvas1 = document.getElementById('canvas1');
-// // const context1 = canvas1.getContext('2d');
-
-// video1.addEventListener('loadeddata', () => {
-//   video1.currentTime = 1; // Перемотка на первую секунду
-// });
-
-// video1.addEventListener('seeked', () => {
-//   context1.drawImage(video1, 0, 0, canvas1.width, canvas1.height);
-//   const posterDataUrl = canvas1.toDataURL('image/jpeg');
-//   video1.setAttribute('poster', posterDataUrl);
-// });
 
 
 
