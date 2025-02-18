@@ -39,14 +39,20 @@ if (caseContainer.scrollLeft + caseContainer.clientWidth >= caseContainer.scroll
 } }, caseScrollInterval); 
 });
 
-const container = document.getElementById('video-container');
+
+
+const videoContainer = document.getElementById('video-container');
+const photoContainer = document.getElementById('photo-container');
 const scrollLeftButton = document.getElementById('scroll-left');
 const scrollRightButton = document.getElementById('scroll-right');
+const scrollLeftPhotoButton = document.getElementById('scroll-left-photo');
+const scrollRightPhotoButton = document.getElementById('scroll-right-photo');
 
 const scrollStep = 360; // Шаг прокрутки в пикселях
+const scrollStepBig = 1065; // Шаг прокрутки в пикселях
 
 scrollLeftButton.addEventListener('click', () => {
-  container.scrollBy({
+  videoContainer.scrollBy({
     top: 0,
     left: -scrollStep,
     behavior: 'smooth'
@@ -54,12 +60,29 @@ scrollLeftButton.addEventListener('click', () => {
 });
 
 scrollRightButton.addEventListener('click', () => {
-  container.scrollBy({
+  videoContainer.scrollBy({
     top: 0,
     left: scrollStep,
     behavior: 'smooth'
   });
 });
+
+scrollLeftPhotoButton.addEventListener('click', () => {
+  photoContainer.scrollBy({
+    top: 0,
+    left: -scrollStepBig,
+    behavior: 'smooth'
+  });
+});
+
+scrollRightPhotoButton.addEventListener('click', () => {
+  photoContainer.scrollBy({
+    top: 0,
+    left: scrollStepBig,
+    behavior: 'smooth'
+  });
+});
+
 
 
 
@@ -76,16 +99,24 @@ scrollRightButton.addEventListener('click', () => {
 // });
 
 
-// светлые цвета
 document.addEventListener("DOMContentLoaded", function() {
   const textBlocks = document.querySelectorAll('.visual__text-block');
-  const colors = ['#a8dadc', '#457b9d', '#1d3557', '#e63946', '#f1faee'];
+  const colors = [
+    '#FF5733', '#3498DB', '#E63946', '#F1FAEE', '#A8DADC', 
+    '#1D3557', '#F4A261', '#2A9D8F', '#264653', '#e76f51',
+    '#81b29a', '#f2cc8f', '#3d405b', '#e07a5f', '#6a4c93',
+    '#b2d3c2', '#ffcbf2', '#bde0fe', '#a2d2ff'
+  ];
 
   textBlocks.forEach(block => {
     const randomColor = colors[Math.floor(Math.random() * colors.length)];
     block.style.backgroundColor = randomColor;
+    block.style.color = '#959595';
   });
 });
+
+
+
 
   
 document.addEventListener('DOMContentLoaded', function() {
@@ -184,5 +215,70 @@ updateSlider();
 
 
 
+
+
+
+
+let images = ['images/photo for Mood Bord/new/z1.jpg', 'images/photo for Mood Bord/new/z2.jpg', 'images/photo for Mood Bord/new/z3.jpg', 'images/photo for Mood Bord/new/z4.jpg', 'images/photo for Mood Bord/new/z6.jpg', 'images/photo for Mood Bord/new/z7.jpg', 'images/photo for Mood Bord/new/z8.jpg', 'images/photo for Mood Bord/new/z9.jpg', 'images/photo for Mood Bord/new/z10.jpg', 'images/photo for Mood Bord/new/z11.jpg', 'images/photo for Mood Bord/new/z12.jpg', 'images/photo for Mood Bord/new/z13.jpg'];
+let usedImages = [];
+let texts = ['#Енергія', '#Натхнення', '#ВашВибір', '#Україна', '#Мода', '#Перемога', '#Сила', '#Краса', '#Гармонія', '#Надія', '#Мрія', '#Майбутнє', '#Розвиток', '#Творчість', '#Свобода'];
+let usedTexts = [];
+
+function randomElement(arr, usedArr) {
+    if (arr.length === 0) {
+        [arr, usedArr] = [usedArr, arr]; // Swap arrays when all elements are used
+    }
+    const index = Math.floor(Math.random() * arr.length);
+    const element = arr.splice(index, 1)[0];
+    usedArr.push(element);
+    return element;
+}
+
+function fadeAndUpdate(element, type) {
+    element.style.opacity = 0;
+    setTimeout(() => {
+        updateCellContent(element, type);
+        element.style.opacity = 1;
+        element.classList.add('fade');
+    }, 500); // Пауза перед заменой контента
+}
+
+function updateCellContent(element, type) {
+    const classes = element.className.replace('fade', '').trim();
+    if (type === 'IMG') {
+        element.src = randomElement(images, usedImages);
+    } else {
+        element.innerHTML = randomElement(texts, usedTexts);
+    }
+    element.className = `${classes} fade`;
+}
+
+function updateRandomCell() {
+    const wrapper = document.getElementById('visualWrapper');
+    const cells = Array.from(wrapper.children);
+    const imageCells = cells.filter(cell => cell.tagName === 'IMG');
+    const textCells = cells.filter(cell => cell.classList.contains('visual__text-block'));
+
+    if (Math.random() > 0.5 && imageCells.length > 0 && images.length > 0) {
+        const randomImageCell = imageCells[Math.floor(Math.random() * imageCells.length)];
+        fadeAndUpdate(randomImageCell, 'IMG');
+    } else if (textCells.length > 0 && texts.length > 0) {
+        const randomTextCell = textCells[Math.floor(Math.random() * textCells.length)];
+        fadeAndUpdate(randomTextCell, 'TEXT');
+    }
+}
+
+function getRandomInterval() {
+    return Math.floor(Math.random() * (5000 - 2000 +1)) + 2000;
+}
+
+function startRandomUpdates() {
+    setTimeout(() => {
+        updateRandomCell();
+        startRandomUpdates();
+    }, getRandomInterval());
+}
+
+startRandomUpdates();
 
 

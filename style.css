@@ -30,6 +30,54 @@ img{
   max-width: 100%;
 }
 
+.smm-Colorbord {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  border: 10px solid #ff6f61;
+  max-width: 1220px;
+  margin: 100px auto 0 auto;
+  border-radius: 20px;
+  padding-bottom: 20px;
+}
+
+.smm-text{
+  border-bottom-right-radius: 20px;
+  font-weight: 700;
+  font-size: 54px;
+  line-height: 1.19;
+  letter-spacing: -0.01em;
+  color: #dedede;
+  padding: 20px;
+  background-color: #ff6f61; 
+  display: inline-block;
+  padding-right: 30px;
+}
+
+.ugc-Colorbord {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  border: 10px solid #0077ff;
+  max-width: 1220px;
+  margin: 100px auto 0 auto;
+  border-radius: 20px;
+  padding-bottom: 20px;
+}
+
+.ugc-text{
+  border-bottom-right-radius: 20px;
+  font-weight: 700;
+  font-size: 54px;
+  line-height: 1.19;
+  letter-spacing: -0.01em;
+  color: #dedede;
+  padding: 20px;
+  background-color: #0077ff; 
+  display: inline-block;
+  padding-right: 30px;
+}
+
 .container{
   max-width: 1250px;
   margin: 0 auto;
@@ -326,24 +374,23 @@ h1{
 
 }
 
-.grids{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 30px;
-  margin-top: 100px;
-  overflow: hidden; /* Защита от выпадения элементов */
+.stopies__text{
+  text-align: center;
+  width: 70%;
+  margin: 0 auto 70px;
 }
 
-
-
-
+.grids{
+  margin-top: 50px;
+  overflow: hidden; /* Защита от выпадения элементов */
+}
 
 .gridLogo {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 3px;
-  background-color: #DEDEDE;
-  padding: 3px;
+  gap: 20px;
+  /* background-color: #DEDEDE; */
+  /* padding: 3px; */
   border-radius: 3px;
   overflow: hidden; /* Убираем "выпадение" картинок за границы */
 }
@@ -351,7 +398,7 @@ h1{
 
 .gridImg {
   width: 100%;
-  height: 250px;
+  height: 673px;
   object-fit: cover; /* Обеспечит красивое обрезание изображений */
   display: block; /* Убираем лишние отступы у inline-элементов */
 }
@@ -378,6 +425,9 @@ h1{
   .gridImg {
     height: 280px;
   }
+  .gridLogo {
+    gap: 15px;
+  }
 }
 @media (max-width: 600px){
   .gridImg {
@@ -387,6 +437,9 @@ h1{
 @media (max-width: 450px){
   .gridImg {
     height: 200px;
+  }
+  .gridLogo {
+    gap: 5px;
   }
 }
 @media (max-width: 375px){
@@ -477,6 +530,81 @@ p.subtitle {
   display: none;
 }
 
+/* Фото скрол*/
+
+.photo-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.photo-container {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  width: 100%;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.photo-container::-webkit-scrollbar {
+  display: none;
+}
+
+.photo-item {
+  flex: 0 0 auto;
+  margin: 50px 25px 30px;
+  margin-right: 40px;
+  width: 290px;
+  border-radius: 50px;
+  color: #DEDEDE;
+  position: relative;
+}
+
+.photo-img {
+  border-radius: 55px;
+  /* height: 570px;
+  width: 320px; */
+  height: 100%;
+  /* width: 100%; */
+}
+
+.photo-iphone {
+  position: absolute;
+  pointer-events: none;
+  height: 103%;
+  top: -10px;
+  left: -1px;
+}
+
+.namePhoto {
+  text-align: center;
+}
+
+.scroll-button {
+  border: none;
+  cursor: pointer;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 25px;
+  z-index: 10;
+  border-radius: 20px;
+}
+
+.scroll-button.left {
+  left: -10px;
+}
+
+.scroll-button.right {
+  right: 25px;
+}
+
+.arrow-right {
+  display: none;
+}
+
+
 /* Визуал секция */
 
 .visual__h2{
@@ -496,9 +624,9 @@ p.subtitle {
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   grid-auto-rows: 200px;
   gap: 15px;
-  background: radial-gradient(circle, #202020, #323232);
+  /* background: radial-gradient(circle, #202020, #323232); */
   border-radius: 10px;
-  padding: 15px;
+  /* padding: 15px; */
 }
 
 .visual__img,
@@ -518,8 +646,7 @@ p.subtitle {
   justify-content: center;
   align-items: center;
   background-color: #ff6f61;
-  color: #DEDEDE;
-  font-size: 22px;
+  font-size: 26px;
   text-align: center;
   padding: 20px;
   border-radius: 10px;
@@ -528,49 +655,43 @@ p.subtitle {
 
 
 @media (max-width: 1120px){
-.visual__text-block--large {
-  grid-column: span 2;
+.tallBig {
   grid-row: span 2;
 }
-
-.visual__text-block--medium {
+.mediumBig{
   grid-column: span 2;
-}
-
-.visual__text-block--tall {
-  grid-row: span 2;
 }
 }
 
 @media (max-width: 905px){
-  .visual__text-block--large {
-    grid-column: span 2;
-    grid-row: span 2;
+  .tallBig {
+    grid-row: span 1;
   }
-  
-  .visual__text-block--medium {
+  .mediumBig{
     grid-column: span 1;
   }
-  
-  .visual__text-block--tall {
-    grid-row: span 2;
-  }
+
+  .mediumMedium{
+    grid-column: span 2;
   }
 
-  @media (max-width: 690px){
-    .visual__text-block--large {
-      grid-column: span 2;
-      grid-row: span 2;
-    }
-    
-    .visual__text-block--medium {
-      grid-column: span 2;
-    }
-    
-    .visual__text-block--tall {
-      grid-row: span 2;
-    }
-    }
+  .visual__img--tallNew{
+    grid-row: span 1;
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 690px){
+  .largeSmall{
+    grid-column: span 2;
+  }
+  .mediumSmall{
+    grid-row: span 2;
+  }
+  .visual__img--medium2 {
+    display: none;
+  }
+}
 
 
 
@@ -583,9 +704,25 @@ p.subtitle {
 .visual__img--medium {
   grid-column: span 2;
 }
+.visual__img--medium2 {
+  grid-column: span 2;
+}
 
 .visual__img--tall {
   grid-row: span 2;
+}
+
+.visual__img--tallNew{
+  grid-row: span 2;
+}
+
+.fade {
+  animation: fadeOutIn 3s;
+}
+
+@keyframes fadeOutIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
 }
 
 
@@ -598,13 +735,6 @@ p.subtitle {
     grid-template-columns: 1fr;
     grid-auto-rows: auto;
     justify-items: center;
-  }
-
-  .visual__img,
-  .visual__placeholder {
-    width: 100%;
-    max-width: none;
-    height: auto;
   }
 
   .visual__text-block {
@@ -625,7 +755,7 @@ p.subtitle {
 
 /* Проекты */
 .project__h2{
-  margin: 180px auto 65px;
+  margin: 100px auto 65px;
   /* font-family: 'Manrope'; */
   font-style: normal;
   font-weight: 700;
@@ -661,26 +791,16 @@ p.subtitle {
 .video-item {
   flex: 0 0 auto;
   margin: 20px;
-  border-radius: 50px;
   color: #DEDEDE;
-  background-color: black;
   position: relative;
+  height: 100%;
 }
 
 .vid{
-  border-top-left-radius: 55px;  /* Закругление левого верхнего угла */
-  border-top-right-radius: 55px; /* Закругление правого верхнего угла */
+  border-radius: 15px;
   height: 570px;
   width: 320px;
 
-}
-.iphone{
-  position: absolute;
-  pointer-events: none;
-  height: 630px;
-  width: 590px;
-  top: -10px;
-  left: -1px;
 }
 
 @media (max-width: 950px) {
