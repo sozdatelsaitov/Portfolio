@@ -240,47 +240,49 @@ h1{
 }
 
 /* Про мене */
-.works__content {
+
+.workText{
+  margin-top: 280px;
+}
+.accordion-content {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.6s ease;
   background-color: #202020; /* Цвет фона гармошки */
-  margin-top: 20px;
-  padding: 0 15px;
   color: #DEDEDE;
   transition: 0.5s;
 }
 
-.works__content.open {
+.accordion-content.open {
   max-height: 1500px; /* Здесь можно задать максимальную высоту раскрытой гармошки */
   transition: 1s;
 }
 
 /* Загальні стилі для контейнера */
-.works__content {
+.accordion-content {
   background-color: #202020;
   color: #DEDEDE;
 }
 
-.works__content .container {
+.accordion-content .container {
   max-width: 1250px;
   margin: 0 auto;
 }
 
 /* Стилі для заголовків */
-.works__content h3 {
+.accordion-content h3 {
   font-weight: 700;
   color: #FFF;
 }
 
-.works__content h3 {
+.accordion-content h3 {
   font-size: 28px;
   margin-top: 30px;
   margin-bottom: 20px;
 }
 
 /* Стилі для текстових абзаців */
-.works__content p {
+.accordion-content p {
   font-weight: 500;
   font-size: 18px;
   line-height: 1.6;
@@ -288,13 +290,13 @@ h1{
 }
 
 /* Стилі для списків */
-.works__content ul {
+.accordion-content ul {
   list-style: none;
   padding-left: 0;
   margin-bottom: 20px;
 }
 
-.works__content ul li {
+.accordion-content ul li {
   font-weight: 500;
   font-size: 18px;
   line-height: 1.6;
@@ -303,7 +305,7 @@ h1{
   position: relative;
 }
 
-.works__content ul li::before {
+.accordion-content ul li::before {
   content: '•';
   color: #FF6F61;
   position: absolute;
@@ -318,17 +320,17 @@ h1{
       font-size: 28px;
   }
 
-  .works__content h3 {
+  .accordion-content h3 {
       font-size: 24px;
   }
 
-  .works__content p, .works__content ul li {
+  .accordion-content p, .accordion-content ul li {
       font-size: 16px;
   }
 }
 
 @media (max-width: 500px) {
-  .works__content {
+  .accordion-content {
     margin-bottom: 10px;
   }
 }
@@ -1525,3 +1527,22 @@ span{
 }
 
 
+.accordion-content {
+  font-size: 20px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-out;
+  /* background-color: #f1f1f1; */
+  padding: 0 10px;
+  /* border: 1px solid #ddd; */
+}
+
+.accordion-content.open {
+  max-height: 600px; /* Задай нужную высоту */
+}
+
+.accordion-button {
+  color: #DEDEDE;
+  cursor: pointer;
+  text-decoration: underline;
+}

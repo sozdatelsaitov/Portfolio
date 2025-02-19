@@ -302,3 +302,12 @@ document.addEventListener("DOMContentLoaded", function() {
   startRandomUpdates();
 });
 
+
+
+function toggleAccordion() {
+  var content = document.getElementById("accordion");
+  content.classList.toggle("open");
+
+  var button = document.getElementById("accordionButton");
+        button.style.display = "none";
+}
