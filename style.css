@@ -27,33 +27,35 @@ img{
 }
 
 .Colorbord {
-  position: relative;
-  z-index: 1;
-  overflow: hidden;
-  max-width: 1220px;
-  margin: 100px auto 0 auto;
-  border-radius: 20px;
+  text-align: center;
 }
 
 .smm{
-  box-shadow: inset 0 0 30px #ff6f61;
+  text-shadow: 0 0 20px #ff6f61;
+  transition: all 0.3s ease;
 }
 .ugc{
-  box-shadow: inset 0 0 30px #0077ff;
+  text-shadow: 0 0 20px #0077ff;
+  transition: all 0.3s ease;
+}
+
+.smm:hover{
+  transform: scale(1.3); /* Эффект при наведении */
+  
+}
+.ugc:hover{
+  transform: scale(1.3); /* Эффект при наведении */
 }
 
 .smm_ugc-text{
   font-family: "Raleway";
-  border-bottom-right-radius: 20px;
   font-weight: 700;
   font-size: 48px;
   letter-spacing: -0.03em;
   color: #dedede;
-  padding: 40px;
-  display: flex;
-  justify-content: center;
+  display: inline-block;
+  margin: 250px auto 50px;
 }
-
 
 .container{
   max-width: 1250px;
@@ -572,7 +574,7 @@ p.subtitle {
 
 .photo-item {
   flex: 0 0 auto;
-  margin: 20px;
+  margin: 22px;
   margin-left: 38px;
   width: 100%; /* Теперь фото займет всю доступную ширину */
   max-width: 290px; /* Максимальная ширина, чтобы на ПК не было слишком больших фото */
@@ -1010,12 +1012,8 @@ p.subtitle {
 
 .pricing-table-wrapper{
   display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
+  margin: 30px auto 30px;
   height: auto;
-  margin-top: 30px;
-  margin-bottom: 20px;
 }
 
 .slider-btn {
