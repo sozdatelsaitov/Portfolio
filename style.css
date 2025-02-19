@@ -565,7 +565,7 @@ p.subtitle {
   display: none;
 }
 
-.photo-item {
+/* .photo-item {
   flex: 0 0 auto;
   margin: 50px 25px 30px;
   margin-right: 40px;
@@ -573,11 +573,28 @@ p.subtitle {
   border-radius: 50px;
   color: #DEDEDE;
   position: relative;
+} */
+
+.photo-item {
+  flex: 0 0 auto;
+  margin: 20px;
+  width: 100%; /* Теперь фото займет всю доступную ширину */
+  max-width: 290px; /* Максимальная ширина, чтобы на ПК не было слишком больших фото */
+  border-radius: 20px;
+  position: relative;
 }
 
-.photo-img {
+/* .photo-img {
   border-radius: 55px;
   height: 100%;
+} */
+
+.photo-img {
+  width: 100%;
+  height: auto; /* Автоматическая высота, чтобы не было растяжений */
+  max-height: 570px; /* Ограничиваем высоту, если нужно */
+  object-fit: cover; /* Делаем, чтобы фото обрезалось красиво */
+  border-radius: 20px;
 }
 
 .photo-iphone {
@@ -588,9 +605,8 @@ p.subtitle {
   left: -1px;
 }
 
-.namePhoto {
-  text-align: center;
-}
+
+
 
 .scroll-button {
   border: none;
