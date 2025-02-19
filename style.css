@@ -217,12 +217,13 @@ h1{
 }
 
 .welcome__img {
-  width: 400px;
-  height: 400px;
+  width: 550px;
+  height: 550px;
   border-radius: 50%;
   margin-right: 93px;
   margin-left: 93px;
 }
+
 
 /* Скрол стрелка!!! */
 .works__btn{
@@ -565,48 +566,32 @@ p.subtitle {
   display: none;
 }
 
-/* .photo-item {
-  flex: 0 0 auto;
-  margin: 50px 25px 30px;
-  margin-right: 40px;
-  width: 290px;
-  border-radius: 50px;
-  color: #DEDEDE;
-  position: relative;
-} */
-
 .photo-item {
   flex: 0 0 auto;
   margin: 20px;
+  margin-left: 38px;
   width: 100%; /* Теперь фото займет всю доступную ширину */
   max-width: 290px; /* Максимальная ширина, чтобы на ПК не было слишком больших фото */
   border-radius: 20px;
   position: relative;
 }
 
-/* .photo-img {
-  border-radius: 55px;
-  height: 100%;
-} */
-
 .photo-img {
-  width: 100%;
+  width: 92%;
   height: auto; /* Автоматическая высота, чтобы не было растяжений */
   max-height: 570px; /* Ограничиваем высоту, если нужно */
   object-fit: cover; /* Делаем, чтобы фото обрезалось красиво */
-  border-radius: 20px;
+  border-radius: 40px;
+  margin-left: 5px;
 }
 
 .photo-iphone {
   position: absolute;
   pointer-events: none;
-  height: 103%;
+  height: 100%;
   top: -10px;
   left: -1px;
 }
-
-
-
 
 .scroll-button {
   border: none;
@@ -649,6 +634,8 @@ p.subtitle {
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   grid-auto-rows: 200px;
   gap: 15px;
+  padding: 15px;
+  background-color: #ffffff04;
   border-radius: 10px;
 }
 
@@ -1258,6 +1245,16 @@ span{
   .welcome__img {
     margin-right: 50px;
     margin-left: 5px;
+  }
+}
+
+@media (max-width: 1040px){
+  .welcome__img {
+    width: 400px;
+    height: 400px;
+    /* border-radius: 50%;
+    margin-right: 93px;
+    margin-left: 93px; */
   }
 }
 

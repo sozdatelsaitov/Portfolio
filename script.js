@@ -49,7 +49,7 @@ const scrollLeftPhotoButton = document.getElementById('scroll-left-photo');
 const scrollRightPhotoButton = document.getElementById('scroll-right-photo');
 
 const scrollStep = 360; // Шаг прокрутки в пикселях
-const scrollStepBig = 1065; // Шаг прокрутки в пикселях
+const scrollStepBig = 1045; // Шаг прокрутки в пикселях
 
 scrollLeftButton.addEventListener('click', () => {
   videoContainer.scrollBy({
@@ -83,20 +83,6 @@ scrollRightPhotoButton.addEventListener('click', () => {
   });
 });
 
-
-
-
-
-// Тёмные цвета
-// document.addEventListener("DOMContentLoaded", function() {
-//   const textBlocks = document.querySelectorAll('.visual__text-block');
-//   const colors = ['#343a40', '#495057', '#212529', '#6c757d', '#000000'];
-
-//   textBlocks.forEach(block => {
-//     const randomColor = colors[Math.floor(Math.random() * colors.length)];
-//     block.style.backgroundColor = randomColor;
-//   });
-// });
 
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -212,10 +198,6 @@ planSlider.addEventListener('input', updateSlider);
 
 // Инициализация начального состояния
 updateSlider();
-
-
-
-
 
 
 
