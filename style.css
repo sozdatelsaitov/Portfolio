@@ -36,10 +36,10 @@ img{
 }
 
 .smm{
-  box-shadow: 0 0 50px #ff6f61;
+  box-shadow: inset 0 0 30px #ff6f61;
 }
 .ugc{
-  box-shadow: 0 0 50px #0077ff;
+  box-shadow: inset 0 0 30px #0077ff;
 }
 
 .smm_ugc-text{
@@ -115,6 +115,16 @@ img{
     display: flex;
     gap: 30px;
     margin-left: 20px;
+  }
+
+  .smm_ugc-text{
+    font-size: 38px;
+  }
+}
+
+@media (max-width: 550px) {
+  .smm_ugc-text{
+    font-size: 30px;
   }
 }
 
@@ -244,17 +254,17 @@ h1{
 .workText{
   margin-top: 280px;
 }
+
 .accordion-content {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.6s ease;
-  background-color: #202020; /* Цвет фона гармошки */
   color: #DEDEDE;
   transition: 0.5s;
 }
 
 .accordion-content.open {
-  max-height: 1500px; /* Здесь можно задать максимальную высоту раскрытой гармошки */
+  /* max-height: 100px; */
   transition: 1s;
 }
 
@@ -311,7 +321,7 @@ h1{
   position: absolute;
   left: 0;
   font-size: 24px;
-  top: 0;
+  top: 18px;
 }
 
 /* Адаптивні стилі для малих екранів */
@@ -1377,6 +1387,10 @@ span{
     justify-content: center;
     margin-top: 10px;
 }
+
+.workText{
+  margin-top: 140px;
+}
 }
 
 @media (max-width: 880px){
@@ -1448,19 +1462,20 @@ span{
 
   .header__nav {
     position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    background: rgba(50, 50, 50, 0.9);
+    top: 80px;
+    right: 0;
+    width: 220px;
+    background: #3232326a;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
-    gap: 20px;
+    align-items: center;
     padding: 7px 0;
     opacity: 0;
-    transform: translateY(-10px);
+    transform: translateY(-50px);
     pointer-events: none;
-    transition: opacity 0.4s ease, transform 0.4s ease;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    border-bottom-left-radius: 20px;
   }
 
   .header--mobile .header__nav {
@@ -1502,6 +1517,7 @@ span{
     line-height: 1.5;
     letter-spacing: -0.03em;
   }
+
 }
 
 @media (max-width: 500px){
@@ -1524,6 +1540,8 @@ span{
     width: auto;
     padding: 0 auto;
   }
+
+
 }
 
 
@@ -1538,7 +1556,7 @@ span{
 }
 
 .accordion-content.open {
-  max-height: 600px; /* Задай нужную высоту */
+  max-height: 1200px; /* Задай нужную высоту */
 }
 
 .accordion-button {
