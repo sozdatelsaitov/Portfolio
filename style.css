@@ -26,53 +26,34 @@ img{
   max-width: 100%;
 }
 
-.smm-Colorbord {
+.Colorbord {
   position: relative;
   z-index: 1;
   overflow: hidden;
-  border: 10px solid #ff6f61;
   max-width: 1220px;
   margin: 100px auto 0 auto;
   border-radius: 20px;
-  padding-bottom: 20px;
 }
 
-.smm-text{
+.smm{
+  box-shadow: 0 0 50px #ff6f61;
+}
+.ugc{
+  box-shadow: 0 0 50px #0077ff;
+}
+
+.smm_ugc-text{
+  font-family: "Raleway";
   border-bottom-right-radius: 20px;
   font-weight: 700;
-  font-size: 54px;
-  line-height: 1.19;
-  letter-spacing: -0.01em;
+  font-size: 48px;
+  letter-spacing: -0.03em;
   color: #dedede;
-  padding: 20px;
-  background-color: #ff6f61; 
-  display: inline-block;
-  padding-right: 30px;
+  padding: 40px;
+  display: flex;
+  justify-content: center;
 }
 
-.ugc-Colorbord {
-  position: relative;
-  z-index: 1;
-  overflow: hidden;
-  border: 10px solid #0077ff;
-  max-width: 1220px;
-  margin: 100px auto 0 auto;
-  border-radius: 20px;
-  padding-bottom: 20px;
-}
-
-.ugc-text{
-  border-bottom-right-radius: 20px;
-  font-weight: 700;
-  font-size: 54px;
-  line-height: 1.19;
-  letter-spacing: -0.01em;
-  color: #dedede;
-  padding: 20px;
-  background-color: #0077ff; 
-  display: inline-block;
-  padding-right: 30px;
-}
 
 .container{
   max-width: 1250px;
@@ -145,10 +126,18 @@ img{
   font-size: 20px;
   line-height: 1.5;
   letter-spacing: -0.03em;
-
+  transition: all 0.3s ease;
+  
 }
 .header__link:hover {
-  text-decoration: underline;
+  transform: scale(1.1); /* Эффект при наведении */
+}
+
+.colorSMM:hover{
+  color: #ff6f61;
+}
+.colorUGC:hover{
+  color: #0077ff;
 }
 
 .burger-menu {
@@ -198,12 +187,13 @@ h1{
   color: white;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.5s ease; /* Время и тип анимации */
 }
 .btn::before{
   content: url('images/inst.svg');
 }
 .btn:hover {
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.192);
+    transform: scale(1.2); /* Эффект при наведении */
 }
 
 .inst{
@@ -235,12 +225,14 @@ h1{
   display: inline-flex;
   align-items: center;
   gap: 26px;
-  opacity: 0.8;
+  /* opacity: 0.8; */
+  transition: all 0.5s ease; /* Время и тип анимации */
 }
 
 .works__btn:hover{
-  opacity: 1;
-  text-decoration: underline;
+  /* opacity: 1; */
+  /* text-decoration: underline; */
+  transform: scale(1.2); /* Эффект при наведении */
 }
 
 .works__btn::before{
@@ -647,7 +639,6 @@ p.subtitle {
   object-position: center;
   display: block;
   border-radius: 10px;
-  transition: opacity 0.9s ease-in-out; /* Плавная смена */
 }
 
 /* Текстовые блоки */
@@ -664,7 +655,7 @@ p.subtitle {
 }
 
 .visual__img, .visual__text-block {
-  transition: opacity 0.5s ease-in-out;
+  transition: opacity 2s ease-in-out;
 }
 
 @media (max-width: 1120px){
@@ -935,6 +926,7 @@ p.subtitle {
   color: #DEDEDE;
   text-align: center;
   margin-top: 150px;
+  margin-bottom: 20px;
 }
 
 .pricing .container {
@@ -1011,6 +1003,7 @@ p.subtitle {
   width: 100%;
   height: auto;
   margin-top: 30px;
+  margin-bottom: 20px;
 }
 
 .slider-btn {
@@ -1202,6 +1195,11 @@ p.subtitle {
   margin-bottom: 48px;
 }
 
+.contact__text2{
+  font-size: 26px;
+  margin: 58px auto 25px;
+}
+
 /* Футер */
 .footer {
   border-top: 1px solid #696969;
@@ -1221,17 +1219,28 @@ span{
 
 .links {
   display: flex;
-  gap: 43px;
+  justify-content: center;
+  gap: 25px;
 }
 
 .footer__link {
-  height: 22px;
-  width: 100%;
-  opacity: 0.5;
-  transition: 0.3s;
+  width: 70px;
+  /* transition: 0.3s; */
 }
-.footer__link:hover{
-  opacity: 1;
+
+.footer__img{
+  width: 50px;
+  transition: all 0.3s ease;
+}
+.footer__img:hover{
+  transform: scale(1.2); /* Эффект при наведении */
+}
+
+.copirite{
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  margin: 30px auto;
 }
 
 @media (max-width: 1100px){
