@@ -219,66 +219,104 @@ updateSlider();
 
 
 
-let images = ['images/photo for Mood Bord/new/z1.jpg', 'images/photo for Mood Bord/new/z2.jpg', 'images/photo for Mood Bord/new/z3.jpg', 'images/photo for Mood Bord/new/z4.jpg', 'images/photo for Mood Bord/new/z6.jpg', 'images/photo for Mood Bord/new/z7.jpg', 'images/photo for Mood Bord/new/z8.jpg', 'images/photo for Mood Bord/new/z9.jpg', 'images/photo for Mood Bord/new/z10.jpg', 'images/photo for Mood Bord/new/z11.jpg', 'images/photo for Mood Bord/new/z12.jpg', 'images/photo for Mood Bord/new/z13.jpg'];
-let usedImages = [];
-let texts = ['#Енергія', '#Натхнення', '#ВашВибір', '#Україна', '#Мода', '#Перемога', '#Сила', '#Краса', '#Гармонія', '#Надія', '#Мрія', '#Майбутнє', '#Розвиток', '#Творчість', '#Свобода'];
-let usedTexts = [];
+document.addEventListener("DOMContentLoaded", function() {
+  const images = [
+      'images/photo for Mood Bord/new/z1.jpg', 'images/photo for Mood Bord/new/z2.jpg',
+      'images/photo for Mood Bord/new/z3.jpg', 'images/photo for Mood Bord/new/z4.jpg',
+      'images/photo for Mood Bord/new/z6.jpg', 'images/photo for Mood Bord/new/z7.jpg',
+      'images/photo for Mood Bord/new/z8.jpg', 'images/photo for Mood Bord/new/z9.jpg',
+      'images/photo for Mood Bord/new/z10.jpg', 'images/photo for Mood Bord/new/z11.jpg',
+      'images/photo for Mood Bord/new/z12.jpg', 'images/photo for Mood Bord/new/z13.jpg'
+  ];
+  
+  const texts = [
+      '#Енергія', '#Натхнення', '#ВашВибір', '#Україна', '#Мода', 
+      '#Перемога', '#Сила', '#Краса', '#Гармонія', '#Надія', 
+      '#Мрія', '#Майбутнє', '#Розвиток', '#Творчість', '#Свобода'
+  ];
 
-function randomElement(arr, usedArr) {
-    if (arr.length === 0) {
-        [arr, usedArr] = [usedArr, arr]; // Swap arrays when all elements are used
-    }
-    const index = Math.floor(Math.random() * arr.length);
-    const element = arr.splice(index, 1)[0];
-    usedArr.push(element);
-    return element;
+  const usedImages = new Set();
+  const usedTexts = new Set();
+  
+  const visualWrapper = document.getElementById('visualWrapper');
+
+  function getUniqueItem(items, usedItems) {
+      if (usedItems.size === items.length) usedItems.clear(); // Если все использованы, очищаем Set
+
+      let randomItem;
+      do {
+          randomItem = items[Math.floor(Math.random() * items.length)];
+      } while (usedItems.has(randomItem)); // Гарантия уникальности
+
+      usedItems.add(randomItem);
+      return randomItem;
+  }
+
+  function updateRandomImage() {
+      const imageElements = Array.from(visualWrapper.querySelectorAll('img.visual__img'));
+
+      if (imageElements.length === 0) return;
+
+      const randomImageElement = imageElements[Math.floor(Math.random() * imageElements.length)];
+      const newImageSrc = getUniqueItem(images, usedImages);
+
+      randomImageElement.style.transition = 'opacity 0.5s ease';
+      randomImageElement.style.opacity = 0;
+
+      setTimeout(() => {
+          randomImageElement.src = newImageSrc;
+          randomImageElement.style.opacity = 1;
+      }, 500);
+  }
+
+  function updateRandomImage() {
+    const imageElements = Array.from(visualWrapper.querySelectorAll('img.visual__img'));
+    if (imageElements.length === 0) return;
+
+    const randomImageElement = imageElements[Math.floor(Math.random() * imageElements.length)];
+    const newImageSrc = getUniqueItem(images, usedImages);
+
+    const newImg = new Image();
+    newImg.src = newImageSrc;
+
+    newImg.onload = () => {
+        randomImageElement.style.transition = 'opacity 0.5s ease';
+        randomImageElement.style.opacity = 0;
+        setTimeout(() => {
+            randomImageElement.src = newImageSrc;
+            randomImageElement.style.opacity = 1;
+        }, 500);
+    };
 }
 
-function fadeAndUpdate(element, type) {
-    element.style.opacity = 0;
+
+  function startRandomUpdates() {
+      setInterval(updateRandomImage, Math.floor(Math.random() * (7000 - 3000) + 3000)); // 3-7 сек
+      setInterval(updateRandomText, Math.floor(Math.random() * (9000 - 4000) + 4000)); // 4-9 сек
+  }
+
+  function updateRandomText() {
+    const textElements = Array.from(visualWrapper.querySelectorAll('.visual__text-block'));
+
+    if (textElements.length === 0) return;
+
+    const randomTextElement = textElements[Math.floor(Math.random() * textElements.length)];
+    const newText = getUniqueItem(texts, usedTexts);
+
+    // Палитра цветов для текста
+    const textColors = ['#FF5733', '#3498DB', '#E63946', '#F1FAEE', '#A8DADC', '#1D3557', '#F4A261'];
+    const randomColor = textColors[Math.floor(Math.random() * textColors.length)];
+
+    randomTextElement.style.transition = 'opacity 0.5s ease';
+    randomTextElement.style.opacity = 0;
+
     setTimeout(() => {
-        updateCellContent(element, type);
-        element.style.opacity = 1;
-        element.classList.add('fade');
-    }, 500); // Пауза перед заменой контента
+        randomTextElement.textContent = newText;
+        randomTextElement.style.color = randomColor; // Изменяем цвет текста
+        randomTextElement.style.opacity = 1;
+    }, 500);
 }
 
-function updateCellContent(element, type) {
-    const classes = element.className.replace('fade', '').trim();
-    if (type === 'IMG') {
-        element.src = randomElement(images, usedImages);
-    } else {
-        element.innerHTML = randomElement(texts, usedTexts);
-    }
-    element.className = `${classes} fade`;
-}
-
-function updateRandomCell() {
-    const wrapper = document.getElementById('visualWrapper');
-    const cells = Array.from(wrapper.children);
-    const imageCells = cells.filter(cell => cell.tagName === 'IMG');
-    const textCells = cells.filter(cell => cell.classList.contains('visual__text-block'));
-
-    if (Math.random() > 0.5 && imageCells.length > 0 && images.length > 0) {
-        const randomImageCell = imageCells[Math.floor(Math.random() * imageCells.length)];
-        fadeAndUpdate(randomImageCell, 'IMG');
-    } else if (textCells.length > 0 && texts.length > 0) {
-        const randomTextCell = textCells[Math.floor(Math.random() * textCells.length)];
-        fadeAndUpdate(randomTextCell, 'TEXT');
-    }
-}
-
-function getRandomInterval() {
-    return Math.floor(Math.random() * (5000 - 2000 +1)) + 2000;
-}
-
-function startRandomUpdates() {
-    setTimeout(() => {
-        updateRandomCell();
-        startRandomUpdates();
-    }, getRandomInterval());
-}
-
-startRandomUpdates();
-
+  startRandomUpdates();
+});
 
