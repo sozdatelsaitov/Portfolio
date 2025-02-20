@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
-
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Pacifico&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 html{
@@ -8,18 +7,20 @@ html{
 
 body{
   font-family: "Nunito";
-  background-color: #202020;
-  color: #959595;
+  background-color: #252525;
+  color: #B3B3B3;
   font-weight: 600;
-  font-size: 20px;
-  line-height: 1.5;
+  font-size: 18px;
+  line-height: 1.6;
   letter-spacing: -0.03em;
+  text-shadow: 0 0 2px rgba(255, 255, 255, 0.1);
 }
 
 h1,
 h2,
 h3{
   font-family: "Raleway";
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 img{
@@ -31,20 +32,20 @@ img{
 }
 
 .smm{
-  text-shadow: 0 0 20px #ff6f61;
+  text-shadow: 0 0 20px #E25E58;
   transition: all 0.3s ease;
 }
 .ugc{
-  text-shadow: 0 0 20px #0077ff;
+  text-shadow: 0 0 20px #005FCC;
   transition: all 0.3s ease;
 }
 
 .smm:hover{
-  transform: scale(1.3); /* Эффект при наведении */
+  transform: scale(1.2); /* Эффект при наведении */
   
 }
 .ugc:hover{
-  transform: scale(1.3); /* Эффект при наведении */
+  transform: scale(1.2); /* Эффект при наведении */
 }
 
 .smm_ugc-text{
@@ -52,9 +53,10 @@ img{
   font-weight: 700;
   font-size: 48px;
   letter-spacing: -0.03em;
-  color: #dedede;
+  color: #EAEAEA;
   display: inline-block;
   margin: 250px auto 50px;
+  text-transform: uppercase;
 }
 
 .container{
@@ -64,9 +66,8 @@ img{
 }
 
 .header {
-  background-color: #3232326a;
+  background-color: rgba(50, 50, 50, 0.85);
   backdrop-filter: blur(10px);
-  color: #DEDEDE;
   font-weight: 700;
   font-size: 18px;
   letter-spacing: -0.03em;
@@ -109,14 +110,14 @@ img{
   
 }
 .header__link:hover {
-  transform: scale(1.1); /* Эффект при наведении */
+  transform: scale(1.2); /* Эффект при наведении */
 }
 
 .colorSMM:hover{
-  color: #ff6f61;
+  color: #E25E58;
 }
 .colorUGC:hover{
-  color: #0077ff;
+  color: #005FCC;
 }
 
 .burger-menu {
@@ -135,12 +136,13 @@ img{
 
 h1{
   width: 500px;
-  font-weight: 700;
-  font-size: 54px;
+  font-weight: 800;
+  font-size: 48px;
   line-height: 1.19;
   letter-spacing: -0.01em;
-  color: #dedede;
+  color: #EAEAEA;
   padding-top: 30px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .welcome__text {
@@ -151,6 +153,7 @@ h1{
   width: 393px;
   margin-top: 24px;
   margin-bottom: 88px;
+  text-align: justify;
 }
 
 .btn {
@@ -164,7 +167,7 @@ h1{
   gap: 10px;
   background: linear-gradient(45deg, #F09433 0%, #E6683C 25%, #DC2743 50%, #CC2366 75%, #BC1888 100%);
   color: white;
-  border-radius: 10px;
+  border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: all 0.5s ease; /* Время и тип анимации */
 }
@@ -172,7 +175,7 @@ h1{
   content: url('images/inst.svg');
 }
 .btn:hover {
-    transform: scale(1.2); /* Эффект при наведении */
+    transform: scale(1.1); /* Эффект при наведении */
 }
 
 .inst{
@@ -198,7 +201,8 @@ h1{
 /* Про мене */
 
 .workText{
-  margin-top: 280px;
+  margin-top: 220px;
+  padding: 0 30px 0;
 }
 
 .accordion-content {
@@ -206,7 +210,7 @@ h1{
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.5s ease-out;
-  padding: 0 10px;
+  padding: 0 30px 30px;
 }
 
 .accordion-content.open {
@@ -215,15 +219,15 @@ h1{
 }
 
 .accordion-button {
-  color: #DEDEDE;
+  color: #EAEAEA;
   cursor: pointer;
   text-decoration: underline;
 }
 
 /* Загальні стилі для контейнера */
 .accordion-content {
-  background-color: #202020;
-  color: #DEDEDE;
+  background-color: #252525;
+  color: #EAEAEA;
 }
 
 .accordion-content .container {
@@ -269,16 +273,15 @@ h1{
 
 .accordion-content ul li::before {
   content: '•';
-  color: #FF6F61;
+  color: #E25E58;
   position: absolute;
   left: 0;
   font-size: 24px;
-  top: 18px;
+  top: -7px;
 }
 
 /* Кейси */
 /* Видео скрол*/
-
 .case-wrapper {
   position: relative;
   display: flex;
@@ -295,7 +298,8 @@ h1{
   width: 100%;
   scrollbar-width: none; 
   -ms-overflow-style: none; 
-  background-color: #DEDEDE;
+  background-color: #EAEAEA;
+  box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
   border-radius: 20px;
   object-fit: cover;
   object-position: center;
@@ -311,10 +315,13 @@ h1{
   justify-content: center;
   align-items: center;
   margin: 20px;
-  color: #DEDEDE;
+  color: #EAEAEA;
   position: relative;
 }
-
+.case-item:hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+}
 
 .caseImg{
   width: 170px;
@@ -349,7 +356,7 @@ h1{
 
 .gridImg {
   width: 100%;
-  height: 673px;
+  height: 550px;
   object-fit: cover; /* Обеспечит красивое обрезание изображений */
   display: block; /* Убираем лишние отступы у inline-элементов */
 }
@@ -364,7 +371,7 @@ h1{
   color: #4e4e4e;
   box-sizing: border-box;
   margin: auto;
-  background: #DEDEDE;
+  background: #EAEAEA;
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
@@ -479,7 +486,7 @@ p.subtitle {
   line-height: 49px;
   text-align: center;
   letter-spacing: -0.5px;
-  color: #DEDEDE;
+  color: #EAEAEA;
 }
 
 .visual__wrapper {
@@ -508,7 +515,7 @@ p.subtitle {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #ff6f61;
+  background-color: #E25E58;
   font-size: 26px;
   text-align: center;
   padding: 20px;
@@ -558,7 +565,7 @@ p.subtitle {
   line-height: 49px;
   text-align: center;
   letter-spacing: -0.5px;
-  color: #DEDEDE;
+  color: #EAEAEA;
 }
 
 /* Видео скрол*/
@@ -586,7 +593,7 @@ p.subtitle {
 .video-item {
   flex: 0 0 auto;
   margin: 20px;
-  color: #DEDEDE;
+  color: #EAEAEA;
   position: relative;
   height: 100%;
 }
@@ -627,8 +634,8 @@ p.subtitle {
 
 /* Прайс */
 .pricing {
-  background-color: #202020;
-  color: #DEDEDE;
+  background-color: #252525;
+  color: #EAEAEA;
   text-align: center;
   margin-top: 150px;
   margin-bottom: 20px;
@@ -698,7 +705,7 @@ p.subtitle {
   width: 100%;
   max-width: 1250px; /* Задайте максимальную ширину для таблицы */
   margin: auto; /* Центрирование таблицы */
-  transition: opacity 0.5s ease;
+  transition: opacity 0.5s ease-in-out;
 }
 
 .pricing-table-wrapper{
@@ -741,7 +748,7 @@ p.subtitle {
   appearance: none;
   width: 34px;
   height: 34px;
-  background: #ff6f61;
+  background: #E25E58;
   border-radius: 50%;
   cursor: pointer;
   transition: transform 0.2s ease-in-out;
@@ -749,14 +756,14 @@ p.subtitle {
 
 /* Увеличение при наведении */
 #planSlider::-webkit-slider-thumb:hover {
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
 
 /* Стиль ползунка для Firefox */
 #planSlider::-moz-range-thumb {
   width: 34px;
   height: 34px;
-  background: #ff6f61;
+  background: #E25E58;
   border-radius: 50%;
   cursor: pointer;
   transition: transform 0.2s ease-in-out;
@@ -764,7 +771,7 @@ p.subtitle {
 
 /* Увеличение при наведении в Firefox */
 #planSlider::-moz-range-thumb:hover {
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
 
 #planSlider::-webkit-slider-runnable-track {
@@ -780,7 +787,7 @@ p.subtitle {
   appearance: none; /* Убирает стандартное оформление бегунка для всех браузеров */
   width: 34px; /* Увеличиваем размер бегунка */
   height: 34px; /* Увеличиваем размер бегунка */
-  background: #ff6f61;
+  background: #E25E58;
   cursor: pointer;
   border-radius: 50%;
   margin-top: -9px; /* Поднятие бегунка для центрирования */
@@ -796,7 +803,7 @@ p.subtitle {
 #planSlider::-moz-range-thumb {
   width: 34px; /* Увеличиваем размер бегунка */
   height: 34px; /* Увеличиваем размер бегунка */
-  background: #ff6f61;
+  background: #E25E58;
   cursor: pointer;
   border-radius: 50%;
 }
@@ -836,7 +843,7 @@ p.subtitle {
 }
 
 .tarif.active {
-  color: #ff6f61; /* Цвет активного текста */
+  color: #E25E58; /* Цвет активного текста */
 }
 
 /* Контакты */
@@ -856,7 +863,7 @@ p.subtitle {
   font-size: 36px;
   line-height: 49px;
   letter-spacing: -0.5px;
-  color: #DEDEDE;
+  color: #EAEAEA;
 }
 
 .contact__text{
@@ -902,13 +909,14 @@ span{
 }
 .footer__img:hover{
   transform: scale(1.2); /* Эффект при наведении */
+  filter: brightness(1.2);
 }
 
 .copirite{
   font-size: 16px;
   display: flex;
   justify-content: center;
-  margin: 30px auto;
+  padding: 20px 0;
 }
 
 
@@ -1144,11 +1152,10 @@ span{
   }
 
   h1{
-    font-size: 36px;
+    font-size: 32px;
     line-height: 40px;
     text-align: center;
     letter-spacing: -0.5px;
-    color: #DEDEDE;
     opacity: 0.66;
   }
   .welcome__text{
