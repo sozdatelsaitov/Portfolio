@@ -97,39 +97,6 @@ img{
   gap: 60px;
 }
 
-@media (max-width: 1000px) {
-  .header__nav {
-    display: flex;
-    gap: 30px;
-  }
-  .header__link {
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    font-weight: 600;
-    font-size: 10px;
-    line-height: 1.5;
-    letter-spacing: -0.03em;
-  }
-}
-@media (max-width: 880px) {
-  .header__nav {
-    display: flex;
-    gap: 30px;
-    margin-left: 20px;
-  }
-
-  .smm_ugc-text{
-    font-size: 38px;
-  }
-}
-
-@media (max-width: 550px) {
-  .smm_ugc-text{
-    font-size: 30px;
-  }
-}
-
 .header__link {
   text-decoration: none;
   display: flex;
@@ -228,29 +195,6 @@ h1{
 
 
 /* Скрол стрелка!!! */
-.works__btn{
-  margin-top: 145px;
-  font-size: 16px;
-  line-height: 16px;
-  letter-spacing: 1.5px;
-  background-color: transparent;
-  display: inline-flex;
-  align-items: center;
-  gap: 26px;
-  /* opacity: 0.8; */
-  transition: all 0.5s ease; /* Время и тип анимации */
-}
-
-.works__btn:hover{
-  /* opacity: 1; */
-  /* text-decoration: underline; */
-  transform: scale(1.2); /* Эффект при наведении */
-}
-
-.works__btn::before{
-  content: url('images/arrow.svg');
-}
-
 /* Про мене */
 
 .workText{
@@ -332,29 +276,6 @@ h1{
   top: 18px;
 }
 
-
-
-/* Адаптивні стилі для малих екранів */
-@media (max-width: 768px) {
-  .about-me h2 {
-      font-size: 28px;
-  }
-
-  .accordion-content h3 {
-      font-size: 24px;
-  }
-
-  .accordion-content p, .accordion-content ul li {
-      font-size: 16px;
-  }
-}
-
-@media (max-width: 500px) {
-  .accordion-content {
-    margin-bottom: 10px;
-  }
-}
-
 /* Кейси */
 /* Видео скрол*/
 
@@ -378,7 +299,6 @@ h1{
   border-radius: 20px;
   object-fit: cover;
   object-position: center;
-  
 }
 
 .case-container::-webkit-scrollbar {
@@ -394,11 +314,7 @@ h1{
   color: #DEDEDE;
   position: relative;
 }
-@media (max-width: 750px){
-  .case-item {
-    margin: 5px;
-  }
-}
+
 
 .caseImg{
   width: 170px;
@@ -409,7 +325,6 @@ h1{
   border: none;
   cursor: pointer;
   padding: 25px;
-
 }
 
 .stopies__text{
@@ -437,82 +352,6 @@ h1{
   height: 673px;
   object-fit: cover; /* Обеспечит красивое обрезание изображений */
   display: block; /* Убираем лишние отступы у inline-элементов */
-}
-
-@media (max-width: 1050px){
-  .grids{
-    grid-template-columns: 1fr;
-  }
-  .gridImg {
-    height: 410px;
-  }
-}
-
-@media (max-width: 850px){
-  .gridImg {
-    height: 350px;
-  }
-}
-@media (max-width: 750px){
-  .gridImg {
-    height: 280px;
-  }
-  .gridLogo {
-    gap: 15px;
-  }
-}
-@media (max-width: 600px){
-  .gridImg {
-    height: 230px;
-  }
-}
-@media (max-width: 450px){
-  .gridImg {
-    height: 200px;
-  }
-  .gridLogo {
-    gap: 5px;
-  }
-}
-@media (max-width: 375px){
-  .gridImg {
-    height: 160px;
-  }
-}
-
-.works__wrapper {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 25px;
-}
-
-.work {
-  height: 888px;
-  position: relative;
-}
-.work:hover{
-  opacity: 1;
-}
-
-.work:nth-child(2n){
-  position: relative;
-  top: 140px;
-}
-
-.work__img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: top left;
-}
-.green{
-  border-top: 25px solid #457b9d;
-  background-color: #457b9d;
-}
-
-.yellow{
-  border-top: 20px solid #e63946;
-  background-color: #e63946;
 }
 
 .work__text{
@@ -680,45 +519,6 @@ p.subtitle {
   transition: opacity 2s ease-in-out;
 }
 
-@media (max-width: 1120px){
-.tallBig {
-  grid-row: span 2;
-}
-.mediumBig{
-  grid-column: span 2;
-}
-}
-
-@media (max-width: 905px){
-  .tallBig {
-    grid-row: span 1;
-  }
-  .mediumBig{
-    grid-column: span 1;
-  }
-
-  .mediumMedium{
-    grid-column: span 2;
-  }
-
-  .visual__img--tallNew{
-    grid-row: span 1;
-    grid-column: span 2;
-  }
-}
-
-@media (max-width: 690px){
-  .largeSmall{
-    grid-column: span 2;
-  }
-  .mediumSmall{
-    grid-row: span 2;
-  }
-  .visual__img--medium2 {
-    display: none;
-  }
-}
-
 /* Пример различных размеров изображений */
 .visual__img--large {
   grid-column: span 2;
@@ -748,33 +548,6 @@ p.subtitle {
   0% { opacity: 0; }
   100% { opacity: 1; }
 }
-
-
-/* Медиа-запрос для маленьких экранов */
-/* Медиа-запрос для экранов шириной до 480px */
-@media (max-width: 480px) {
-  .visual__wrapper {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-auto-rows: auto;
-    justify-items: center;
-  }
-
-  .visual__text-block {
-    display: none;
-  }
-
-  .visual__img--large,
-  .visual__img--medium,
-  .visual__img--tall,
-  .visual__text-block--large,
-  .visual__text-block--medium,
-  .visual__text-block--tall {
-    grid-column: unset;
-    grid-row: unset;
-  }
-}
-
 
 /* Проекты */
 .project__h2{
@@ -825,96 +598,6 @@ p.subtitle {
 
 }
 
-@media (max-width: 950px) {
-  .vid{
-    height: 798px;
-    width: 448px;
-  
-  }
-  .iphone{
-    height: 863px;
-    top: -10px;
-    left: -1px;
-  }
-}
-
-@media (max-width: 510px) {
-  .vid{
-    height: 718.2px;
-    width: 439.2px;
-  
-  }
-  .iphone{
-    height: 781px;
-    top: -10px;
-    left: -1px;
-  }
-}
-
-@media (max-width: 490px) {
-  .vid{
-    height: 658px;
-    width: 406px;
-  
-  }
-  .iphone{
-    height: 719px;
-    top: -10px;
-    left: -1px;
-  }
-}
-
-@media (max-width: 455px) {
-  .vid{
-    height: 592px;
-    width: 365px;
-  
-  }
-  .iphone{
-    height: 653px;
-    top: -10px;
-    left: -1px;
-  }
-}
-
-@media (max-width: 430px) {
-  .vid{
-    height: 627px;
-    width: 352px;
-  
-  }
-  .iphone{
-    height: 685px;
-    top: -10px;
-    left: -1px;
-  }
-}
-
-@media (max-width: 400px) {
-  .vid{
-    height: 564px;
-    width: 316px;
-  
-  }
-  .iphone{
-    height: 622px;
-    top: -10px;
-    left: -1px;
-  }
-}
-
-@media (max-width: 370px) {
-  .vid{
-    height: 484px;
-    width: 272px;
-  
-  }
-  .iphone{
-    height: 541px;
-    top: -10px;
-    left: -1px;
-  }
-}
 
 .nameVideo{
   text-align: center;
@@ -1156,38 +839,6 @@ p.subtitle {
   color: #ff6f61; /* Цвет активного текста */
 }
 
-/* Адаптивні стилі для малих екранів */
-@media (max-width: 768px) {
-  .pricing-table th,
-  .pricing-table td {
-      padding: 10px;
-      font-size: 16px;
-  }
-  .pricing {
-    margin-top: 100px;
-  }
-
-  .tarif {
-    font-size: 15px;
-  }
-}
-
-@media (max-width: 500px) {
-    .pricing-table th,
-    .pricing-table td {
-        padding: 10px;
-        font-size: 11px;
-    }
-    .pricing {
-      margin-top: 150px;
-    }
-
-    .tarif {
-      font-size: 12px;
-    }
-}
-
-
 /* Контакты */
 .contact {
   margin-top: 240px;
@@ -1243,7 +894,6 @@ span{
 
 .footer__link {
   width: 70px;
-  /* transition: 0.3s; */
 }
 
 .footer__img{
@@ -1261,7 +911,24 @@ span{
   margin: 30px auto;
 }
 
+
+
+
+
+@media (max-width: 1150px){
+.welcome__img {
+  margin-right: 0;
+  margin-left: 0;
+  }
+}
+
 @media (max-width: 1100px){
+  .tallBig {
+    grid-row: span 2;
+  }
+  .mediumBig{
+    grid-column: span 2;
+  }
   .project__img {
     height: 640px;
     width: auto;
@@ -1275,13 +942,35 @@ span{
   }
 }
 
-@media (max-width: 1040px){
+@media (max-width: 1080px){
+  .welcome__img {
+    width: 500px;
+    height: 500px;
+  }
+}
+
+  @media (max-width: 1050px){
+  .grids{
+    grid-template-columns: 1fr;
+  }
+  .gridImg {
+    height: 410px;
+  }
+
   .welcome__img {
     width: 400px;
     height: 400px;
-    /* border-radius: 50%;
-    margin-right: 93px;
-    margin-left: 93px; */
+  }
+}
+
+@media (max-width: 1000px) {
+  .header__nav {
+    display: flex;
+    gap: 30px;
+  }
+
+  .header__link {
+    font-size: 20px;
   }
 }
 
@@ -1306,10 +995,20 @@ span{
   .work__name {
     display: none;
   }
-
 }
 
-@media (max-width: 950px){
+@media (max-width: 950px) {
+  .vid{
+    height: 798px;
+    width: 448px;
+  
+  }
+  .iphone{
+    height: 863px;
+    top: -10px;
+    left: -1px;
+  }
+
   .welcome__img {
     margin-right: 0;
   }
@@ -1349,19 +1048,6 @@ span{
     align-items: center;
   }
 
-  .works__btn{
-    margin-top: 128px;
-  }
-
-  .work {
-    height: 600px;
-    position: relative;
-  }
-  .work:nth-child(2n){
-    position: relative;
-    top: 100px;
-  }
-
   .conainer__footer{
     margin-top: 48px;
     margin-bottom: 36px;
@@ -1392,32 +1078,67 @@ span{
     gap: 10px;
     justify-content: center;
     margin-top: 10px;
-}
-
-.workText{
-  margin-top: 140px;
-}
-}
-
-@media (max-width: 880px){
-  .works__wrapper {
-    grid-template-columns: 1fr;
   }
 
-  .work:nth-child(2n){
-    position: relative;
-    top: 0;
+  .workText{
+    margin-top: 140px;
+  }
+}
+
+@media (max-width: 905px){
+  .tallBig {
+    grid-row: span 1;
+  }
+  .mediumBig{
+    grid-column: span 1;
+  }
+
+  .mediumMedium{
+    grid-column: span 2;
+  }
+
+  .visual__img--tallNew{
+    grid-row: span 1;
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 880px) {
+  .header__nav {
+    display: flex;
+    gap: 30px;
+    margin-left: 20px;
+  }
+
+  .smm_ugc-text{
+    font-size: 38px;
+  }
+
+  .gridImg {
+    height: 350px;
+  }
+
+  .header__link {
+    font-size: 15px;
   }
 }
 
 @media (max-width: 750px){
+  .case-item {
+    margin: 5px;
+  }
+  .gridImg {
+    height: 280px;
+  }
+  .gridLogo {
+    gap: 15px;
+  }
+
   .welcome__img {
     width: 340px;
     height: 340px;
   }
-}
 
-@media (max-width: 750px){
   .header__nav {
     gap: 20px;
   }
@@ -1440,6 +1161,43 @@ span{
 
   .contact__text{
     font-size: 22px;
+  }
+
+  .about-me h2 {
+    font-size: 28px;
+}
+
+.accordion-content h3 {
+    font-size: 24px;
+}
+
+.accordion-content p, .accordion-content ul li {
+    font-size: 16px;
+}
+
+.pricing-table th,
+.pricing-table td {
+    padding: 10px;
+    font-size: 16px;
+}
+.pricing {
+  margin-top: 100px;
+}
+
+.tarif {
+  font-size: 15px;
+}
+}
+
+@media (max-width: 690px){
+  .largeSmall{
+    grid-column: span 2;
+  }
+  .mediumSmall{
+    grid-row: span 2;
+  }
+  .visual__img--medium2 {
+    display: none;
   }
 }
 
@@ -1511,10 +1269,6 @@ span{
   .btn {
     padding: 16px 22px;
   }
-
-  .works__btn{
-    margin-top: 45px;
-  }
   
   .copirite {
     margin-top: 35px;
@@ -1523,10 +1277,47 @@ span{
     line-height: 1.5;
     letter-spacing: -0.03em;
   }
-
 }
 
-@media (max-width: 500px){
+@media (max-width: 600px){
+  .gridImg {
+    height: 230px;
+  }
+
+  .smm_ugc-text{
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 510px) {
+  .vid{
+    height: 718.2px;
+    width: 439.2px;
+  
+  }
+  .iphone{
+    height: 781px;
+    top: -10px;
+    left: -1px;
+  }
+
+  .accordion-content {
+    margin-bottom: 10px;
+  }
+
+  .pricing-table th,
+  .pricing-table td {
+      padding: 10px;
+      font-size: 11px;
+  }
+  .pricing {
+    margin-top: 150px;
+  }
+
+  .tarif {
+    font-size: 12px;
+  }
+
   h1{
     width: auto;
   }
@@ -1536,15 +1327,98 @@ span{
   }
 }
 
-@media (max-width: 350px){
-  h1{
-    width: auto;
-    padding: 0 auto;
+@media (max-width: 490px) {
+  .vid{
+    height: 658px;
+    width: 406px;
+  
+  }
+  .iphone{
+    height: 719px;
+    top: -10px;
+    left: -1px;
   }
 
-  .welcome__text {
-    width: auto;
-    padding: 0 auto;
+  .visual__wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+    justify-items: center;
+  }
+
+  .visual__text-block {
+    display: none;
+  }
+
+  .visual__img--large,
+  .visual__img--medium,
+  .visual__img--tall,
+  .visual__text-block--large,
+  .visual__text-block--medium,
+  .visual__text-block--tall {
+    grid-column: unset;
+    grid-row: unset;
   }
 }
 
+@media (max-width: 455px){
+  .vid{
+    height: 592px;
+    width: 365px;
+  
+  }
+  .iphone{
+    height: 653px;
+    top: -10px;
+    left: -1px;
+  }
+
+  .gridImg {
+    height: 200px;
+  }
+  .gridLogo {
+    gap: 5px;
+  }
+}
+
+@media (max-width: 430px) {
+  .vid{
+    height: 627px;
+    width: 352px;
+  
+  }
+  .iphone{
+    height: 685px;
+    top: -10px;
+    left: -1px;
+  }
+}
+
+@media (max-width: 400px) {
+  .vid{
+    height: 564px;
+    width: 316px;
+  
+  }
+  .iphone{
+    height: 622px;
+    top: -10px;
+    left: -1px;
+  }
+}
+
+@media (max-width: 370px) {
+  .gridImg {
+    height: 160px;
+  }
+  .vid{
+    height: 484px;
+    width: 272px;
+  
+  }
+  .iphone{
+    height: 541px;
+    top: -10px;
+    left: -1px;
+  }
+}
