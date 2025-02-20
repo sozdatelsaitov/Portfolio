@@ -258,16 +258,22 @@ h1{
 }
 
 .accordion-content {
+  font-size: 20px;
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.6s ease;
-  color: #DEDEDE;
-  transition: 0.5s;
+  transition: max-height 0.5s ease-out;
+  padding: 0 10px;
 }
 
 .accordion-content.open {
-  /* max-height: 100px; */
+  max-height: 1200px; /* Задай нужную высоту */
   transition: 1s;
+}
+
+.accordion-button {
+  color: #DEDEDE;
+  cursor: pointer;
+  text-decoration: underline;
 }
 
 /* Загальні стилі для контейнера */
@@ -325,6 +331,8 @@ h1{
   font-size: 24px;
   top: 18px;
 }
+
+
 
 /* Адаптивні стилі для малих екранів */
 @media (max-width: 768px) {
@@ -1538,27 +1546,5 @@ span{
     width: auto;
     padding: 0 auto;
   }
-
-
 }
 
-
-.accordion-content {
-  font-size: 20px;
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.5s ease-out;
-  /* background-color: #f1f1f1; */
-  padding: 0 10px;
-  /* border: 1px solid #ddd; */
-}
-
-.accordion-content.open {
-  max-height: 1200px; /* Задай нужную высоту */
-}
-
-.accordion-button {
-  color: #DEDEDE;
-  cursor: pointer;
-  text-decoration: underline;
-}
