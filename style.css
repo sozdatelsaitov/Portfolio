@@ -428,18 +428,27 @@ p.subtitle {
 
 .photo-item {
   flex: 0 0 auto;
-  margin: 22px;
-  margin-left: 38px;
+  margin: 20px 20px 20px 0;
   width: 100%; /* Теперь фото займет всю доступную ширину */
-  max-width: 290px; /* Максимальная ширина, чтобы на ПК не было слишком больших фото */
+  max-width: 350px; /* Максимальная ширина, чтобы на ПК не было слишком больших фото */
   border-radius: 20px;
   position: relative;
 }
 
+.lineVertical{
+  height: 200px;
+width: 1px;
+background-color: red;
+}
+
+.stac{
+  margin-right: 80px;
+}
+
 .photo-img {
-  width: 92%;
+  width: 87%;
   height: auto; /* Автоматическая высота, чтобы не было растяжений */
-  max-height: 570px; /* Ограничиваем высоту, если нужно */
+  max-height: 670px; /* Ограничиваем высоту, если нужно */
   object-fit: cover; /* Делаем, чтобы фото обрезалось красиво */
   border-radius: 40px;
   margin-left: 5px;
@@ -452,6 +461,8 @@ p.subtitle {
   top: -10px;
   left: -1px;
 }
+
+
 
 .scroll-button {
   border: none;

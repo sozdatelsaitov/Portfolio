@@ -41,6 +41,7 @@ if (caseContainer.scrollLeft + caseContainer.clientWidth >= caseContainer.scroll
 
 
 
+
 const videoContainer = document.getElementById('video-container');
 const photoContainer = document.getElementById('photo-container');
 const scrollLeftButton = document.getElementById('scroll-left');
@@ -49,7 +50,7 @@ const scrollLeftPhotoButton = document.getElementById('scroll-left-photo');
 const scrollRightPhotoButton = document.getElementById('scroll-right-photo');
 
 const scrollStep = 360; // Шаг прокрутки в пикселях
-const scrollStepBig = 1045; // Шаг прокрутки в пикселях
+const scrollStepBig = 1170; // Шаг прокрутки в пикселях
 
 scrollLeftButton.addEventListener('click', () => {
   videoContainer.scrollBy({
